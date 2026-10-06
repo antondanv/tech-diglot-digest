@@ -2,10 +2,13 @@ name: Daily Diglot Weave Digest
 
 on:
   schedule:
-    # Ежедневно в 21:00 UTC (00:00 по Московскому времени)
-    - cron: '0 21 * * *'
+    # Запуск 3 раза в день: в 06:00, 11:00, 16:00 UTC (09:00, 14:00, 19:00 по Москве)
+    - cron: '0 6,11,16 * * *'
   # Кнопка для ручного запуска в интерфейсе GitHub Actions
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   run-digest:
@@ -13,6 +16,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -25,10 +30,17 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Generate and Send Digest
+      - name: Process and Publish Digest
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           python bot.py
+
+      - name: Commit and push queue updates
+        run: |
+          git config user.name "antondanv"
+          git config user.email "antondanilov228@yandex.ru"
+          git add queue.json
+          git diff --staged --quiet || (git commit -m "Update post queue [skip ci]" && git push) || true

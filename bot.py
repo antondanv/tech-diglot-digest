@@ -2,10 +2,14 @@ import os
 import sys
 import re
 import io
+import json
+import random
 import requests
 import feedparser
 from google import genai
 from google.genai import types
+
+QUEUE_FILE = "queue.json"
 
 def get_required_env(name: str) -> str:
     value = os.getenv(name)
@@ -14,91 +18,10 @@ def get_required_env(name: str) -> str:
         sys.exit(1)
     return value
 
-def fetch_recent_news(limit: int = 6) -> tuple[str, str | None]:
-    """Собирает самые свежие новости за последние 24 часа из Google News и профильных изданий."""
-    feeds = [
-        "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=ru&gl=RU&ceid=RU:ru",
-        "https://habr.com/ru/rss/hubs/all/",
-    ]
-    news_items = []
-    first_link = None
-    for url in feeds:
-        try:
-            feed = feedparser.parse(url)
-            for entry in feed.entries[:limit]:
-                title = entry.get("title", "").strip()
-                link = entry.get("link", "").strip()
-                summary = re.sub(r"<[^>]+>", "", entry.get("summary", "")).strip()
-                if title:
-                    if not first_link:
-                        first_link = link
-                    news_items.append(f"- Заголовок: {title}\n  Ссылка: {link}\n  Кратко: {summary[:250]}")
-        except Exception as e:
-            print(f"Ошибка при чтении ленты {url}: {e}", file=sys.stderr)
-
-    if not news_items:
-        return "В мире технологий активно развиваются мультимодальные модели искусственного интеллекта и новые устройства.", None
-    return "\n\n".join(news_items[:10]), first_link
-
-def generate_digest(client: genai.Client, raw_news: str) -> tuple[str, str, str]:
-    prompt = f"""
-Ты профессиональный редактор и преподаватель английского языка. Твоя задача — подготовить ежедневную сводку новостей из мира технологий, искусственного интеллекта и гаджетов по методу двуязычного чтения (Diglot Weave).
-
-Вот актуальные новости за последние 24 часа:
-{raw_news}
-
-Строгие требования:
-1. Выбери из предоставленных новостей ровно 3 ключевых и самых интересных события и сформируй дайджест на русском языке.
-2. Вплети в русский текст ровно 12–15 общеупотребительных английских слов (глаголы, прилагательные, связующие слова и базовые существительные повседневного языка, избегая узких IT-терминов). Контекст предложений должен позволять интуитивно понять значение каждого слова.
-3. Выдели каждое английское слово полужирным шрифтом (**word**).
-4. Обязательно добавь кликабельные ссылки на первоисточники новостей из списка выше в формате [Название источника](URL).
-5. НЕ пиши словарь прямо в основном дайджесте.
-
-Формат вывода должен быть строго разделен на три секции:
-
-[DIGEST]
-(Сюда помести сам дайджест из 3 событий с кликабельными ссылками на источники)
-
-[DICTIONARY]
-📖 **Словарь для самопроверки:**
-(Сюда помести список всех 12–15 использованных английских слов с транскрипцией и переводом на русский язык)
-
-[IMAGE_PROMPT]
-(Сюда помести подробный промпт на английском языке для генерации красивой, современной иллюстрации к главной новости)
-"""
-    print("Генерация дайджеста через Gemini...")
-    models_to_try = ["gemini-3.5-flash-lite", "gemini-3.8-flash"]
-    response = None
-
-    for model_name in models_to_try:
-        try:
-            print(f"Пробуем модель {model_name}...")
-            response = client.models.generate_content(
-                model=model_name,
-                contents=prompt,
-                config=types.GenerateContentConfig(temperature=0.7),
-            )
-            if response and response.text:
-                break
-        except Exception as e:
-            print(f"Ошибка при вызове {model_name}: {e}", file=sys.stderr)
-
-    if not response or not response.text:
-        raise RuntimeError("Не удалось сгенерировать контент ни одной из доступных моделей Gemini.")
-
-    full_text = response.text
-    digest_match = re.search(r"\[DIGEST\](.*?)(\[DICTIONARY\]|$)", full_text, re.DOTALL | re.IGNORECASE)
-    dict_match = re.search(r"\[DICTIONARY\](.*?)(\[IMAGE_PROMPT\]|$)", full_text, re.DOTALL | re.IGNORECASE)
-    img_match = re.search(r"\[IMAGE_PROMPT\](.*)$", full_text, re.DOTALL | re.IGNORECASE)
-
-    digest_text = digest_match.group(1).strip() if digest_match else full_text.strip()
-    dict_text = dict_match.group(1).strip() if dict_match else "📖 Словарь формируется..."
-    img_prompt = img_match.group(1).strip() if img_match else "Modern high-tech illustration representing artificial intelligence and future technology"
-
-    return digest_text, dict_text, img_prompt
-
 def extract_cover_image(link: str) -> str | None:
     """Извлекает обложку статьи через OpenGraph тег og:image."""
+    if not link:
+        return None
     try:
         req = requests.get(link, headers={"User-Agent": "Mozilla/5.0"}, timeout=6)
         match = re.search(r'property=["\']og:image["\']\s+content=["\']([^"\']+)["\']', req.text, re.IGNORECASE)
@@ -110,55 +33,142 @@ def extract_cover_image(link: str) -> str | None:
         print(f"Не удалось извлечь обложку из {link}: {e}", file=sys.stderr)
     return None
 
-def generate_image(client: genai.Client, prompt: str) -> bytes | None:
-    print(f"Попытка генерации иллюстрации Imagen: {prompt[:100]}...")
-    try:
-        result = client.models.generate_images(
-            model="imagen-3.0-generate-002",
-            prompt=prompt,
-            config=dict(number_of_images=1, aspect_ratio="16:9")
-        )
-        if result.generated_images:
-            return result.generated_images[0].image.image_bytes
-    except Exception as e:
-        print(f"Imagen недоступен ({e}), будет использована оригинальная обложка статьи.", file=sys.stderr)
-    return None
+def fetch_diverse_news_pool() -> list[dict]:
+    """Собирает разнообразный пул новостей из разных сфер (ИИ, космос, гаджеты, IT, наука)."""
+    feeds = [
+        "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=ru&gl=RU&ceid=RU:ru",
+        "https://habr.com/ru/rss/hubs/all/",
+        "https://news.google.com/rss/search?q=наука+технологии+гаджеты&hl=ru&gl=RU&ceid=RU:ru",
+        "https://news.google.com/rss/search?q=искусственный+интеллект&hl=ru&gl=RU&ceid=RU:ru",
+    ]
+    pool = []
+    seen_titles = set()
 
-def send_telegram_photo(token: str, chat_id: str, photo: bytes | str) -> int | None:
+    for url in feeds:
+        try:
+            feed = feedparser.parse(url)
+            for entry in feed.entries[:8]:
+                title = entry.get("title", "").strip()
+                link = entry.get("link", "").strip()
+                summary = re.sub(r"<[^>]+>", "", entry.get("summary", "")).strip()
+                clean_title = re.sub(r"\s*-\s*[^-]+$", "", title).strip()
+
+                if clean_title and clean_title not in seen_titles:
+                    seen_titles.add(clean_title)
+                    pool.append({
+                        "title": clean_title,
+                        "link": link,
+                        "summary": summary[:300]
+                    })
+        except Exception as e:
+            print(f"Ошибка при чтении ленты {url}: {e}", file=sys.stderr)
+
+    random.shuffle(pool)
+    return pool[:12]
+
+def generate_daily_batch(client: genai.Client) -> list[dict]:
+    """Генерирует 3 разных поста по разным случайным темам (по 3-4 английских слова на пост)."""
+    news_pool = fetch_diverse_news_pool()
+    news_text = "\n\n".join(
+        f"Новость #{i+1}:\n- Заголовок: {item['title']}\n- Ссылка: {item['link']}\n- Описание: {item['summary']}"
+        for i, item in enumerate(news_pool)
+    )
+
+    prompt = f"""
+Ты профессиональный редактор Telegram-канала и преподаватель английского языка.
+Твоя задача — отобрать из списка ниже 3 САМЫЕ РАЗНЫЕ и интересные темы (например: одна про ИИ/нейросети, вторая про гаджет/железо, третья про софт, науку, космос или безопасность — выбирай каждый день разные направления).
+
+Список актуальных новостей:
+{news_text}
+
+Для каждой из 3 выбранных тем создай отдельный самостоятельный пост по методу двуязычного чтения (Diglot Weave).
+
+Строгие требования к каждому посту:
+1. Пост посвящен ТОЛЬКО одной конкретной теме/событию.
+2. В текст на русском языке органично вплети РОВНО 3–4 общеупотребительных английских слова (глаголы, прилагательные, связки, простые существительные). Избегай узких технических терминов.
+3. Выдели каждое английское слово полужирным шрифтом (**word**).
+4. НЕ вставляй никаких внешних ссылок, URL или сносок в текст поста. Текст должен быть чистым, емким и законченным.
+5. Создай мини-словарь ДЛЯ КОММЕНТАРИЕВ ровно из этих 3–4 слов с транскрипцией и переводом на русский.
+
+Ответ верни строго в формате валидного JSON-массива из 3 объектов:
+[
+  {{
+    "topic": "Краткая тема (например, Искусственный интеллект)",
+    "text": "Чистый текст поста на русском с 3-4 выделенными словами **word** (без ссылок)",
+    "dictionary": "📖 **Словарь к посту:**\\n• **word** [транскрипция] — перевод\\n• ...",
+    "source_url": "URL источника из списка выше (только для извлечения обложки)"
+  }},
+  ...
+]
+Никаких комментариев до и после JSON не пиши, только чистый JSON-массив.
+"""
+    print("Генерация 3 постов на день через Gemini...")
+    models = ["gemini-3.5-flash-lite", "gemini-3.8-flash"]
+    response = None
+
+    for m in models:
+        try:
+            print(f"Запрос к {m}...")
+            response = client.models.generate_content(
+                model=m,
+                contents=prompt,
+                config=types.GenerateContentConfig(temperature=0.8)
+            )
+            if response and response.text:
+                break
+        except Exception as e:
+            print(f"Ошибка вызова {m}: {e}", file=sys.stderr)
+
+    if not response or not response.text:
+        raise RuntimeError("Не удалось сгенерировать посты через Gemini.")
+
+    raw_json = response.text.strip()
+    raw_json = re.sub(r"^```(?:json)?", "", raw_json, flags=re.MULTILINE)
+    raw_json = re.sub(r"```$", "", raw_json, flags=re.MULTILINE).strip()
+
+    posts = json.loads(raw_json)
+
+    # Добавляем обложки к каждому посту
+    for post in posts:
+        url = post.get("source_url")
+        post["image_url"] = extract_cover_image(url) if url else None
+
+    return posts
+
+def send_telegram_photo(token: str, chat_id: str, photo_url: str) -> int | None:
     url = f"https://api.telegram.org/bot{token}/sendPhoto"
-    data = {"chat_id": chat_id}
-    
-    if isinstance(photo, str):
-        data["photo"] = photo
-        resp = requests.post(url, data=data, timeout=30)
-    else:
-        files = {"photo": ("news.jpg", io.BytesIO(photo), "image/jpeg")}
-        resp = requests.post(url, data=data, files=files, timeout=30)
-
+    resp = requests.post(url, data={"chat_id": chat_id, "photo": photo_url}, timeout=30)
     if resp.status_code == 200:
         return resp.json().get("result", {}).get("message_id")
-    print(f"Ошибка отправки фото: {resp.text}", file=sys.stderr)
+    print(f"Не удалось отправить фото: {resp.text}", file=sys.stderr)
     return None
 
 def send_telegram_message(token: str, chat_id: str, text: str, reply_to_id: int | None = None) -> int | None:
     url = f"https://api.telegram.org/bot{token}/sendMessage"
-    
-    payload = {
-        "chat_id": chat_id,
-        "text": text[:4000],
-        "parse_mode": "Markdown"
-    }
+    payload = {"chat_id": chat_id, "text": text[:4000], "parse_mode": "Markdown"}
     if reply_to_id:
         payload["reply_to_message_id"] = reply_to_id
 
     res = requests.post(url, json=payload, timeout=30)
     if res.status_code != 200:
-        print("Предупреждение: ошибка разметки Markdown, отправка обычным текстом...")
         payload.pop("parse_mode", None)
         res = requests.post(url, json=payload, timeout=30)
         res.raise_for_status()
 
     return res.json().get("result", {}).get("message_id")
+
+def load_queue() -> list[dict]:
+    if os.path.exists(QUEUE_FILE):
+        try:
+            with open(QUEUE_FILE, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception as e:
+            print(f"Ошибка чтения {QUEUE_FILE}: {e}", file=sys.stderr)
+    return []
+
+def save_queue(queue: list[dict]):
+    with open(QUEUE_FILE, "w", encoding="utf-8") as f:
+        json.dump(queue, f, ensure_ascii=False, indent=2)
 
 def main():
     gemini_key = get_required_env("GEMINI_API_KEY")
@@ -166,26 +176,37 @@ def main():
     tg_chat_id = get_required_env("TELEGRAM_CHAT_ID")
 
     client = genai.Client(api_key=gemini_key)
+    queue = load_queue()
 
-    raw_news, first_link = fetch_recent_news(limit=6)
-    digest_text, dict_text, img_prompt = generate_digest(client, raw_news)
-    
-    photo = generate_image(client, img_prompt)
-    if not photo and first_link:
-        print("Поиск обложки из оригинальной статьи...")
-        photo = extract_cover_image(first_link)
+    # Если очередь пуста (утренний запуск или первый старт) — генерируем новую партию из 3 постов
+    if not queue:
+        print("Очередь пуста. Генерируем 3 новых поста на сегодня с разными темами...")
+        queue = generate_daily_batch(client)
+        if not queue:
+            print("Не удалось сгенерировать посты.", file=sys.stderr)
+            sys.exit(1)
 
-    print("Публикация в Telegram...")
-    if photo:
-        send_telegram_photo(tg_token, tg_chat_id, photo)
+    # Достаем следующий пост из очереди
+    current_post = queue.pop(0)
+    save_queue(queue)
+    print(f"Публикуем пост: {current_post.get('topic', 'Новость')} (в очереди осталось: {len(queue)})")
 
-    main_msg_id = send_telegram_message(tg_token, tg_chat_id, digest_text)
+    # 1. Отправляем фото статьи (если есть)
+    img_url = current_post.get("image_url")
+    if img_url:
+        send_telegram_photo(tg_token, tg_chat_id, img_url)
 
-    if main_msg_id:
-        print("Отправка словаря в комментарии к посту...")
-        send_telegram_message(tg_token, tg_chat_id, dict_text, reply_to_id=main_msg_id)
+    # 2. Отправляем текст поста
+    post_text = current_post.get("text", "")
+    msg_id = send_telegram_message(tg_token, tg_chat_id, post_text)
 
-    print("Готово! Пост и словарь успешно опубликованы.")
+    # 3. Отправляем словарь в комментарии (ответом к посту)
+    dict_text = current_post.get("dictionary", "")
+    if msg_id and dict_text:
+        print("Отправка словаря (3-4 слова) в комментарии...")
+        send_telegram_message(tg_token, tg_chat_id, dict_text, reply_to_id=msg_id)
+
+    print("Публикация завершена успешно!")
 
 if __name__ == "__main__":
     main()
