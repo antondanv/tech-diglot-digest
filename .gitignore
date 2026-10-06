@@ -5,3 +5,8 @@ __pycache__/
 venv/
 *.jpg
 *.png
+!assets/*.jpg
+!assets/*.png
+*.json.tmp
+.ruff_cache/
+preview*.json
