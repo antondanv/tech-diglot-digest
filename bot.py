@@ -14,13 +14,14 @@ def get_required_env(name: str) -> str:
         sys.exit(1)
     return value
 
-def fetch_recent_news(limit: int = 6) -> str:
+def fetch_recent_news(limit: int = 6) -> tuple[str, str | None]:
     """Собирает самые свежие новости за последние 24 часа из Google News и профильных изданий."""
     feeds = [
         "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=ru&gl=RU&ceid=RU:ru",
         "https://habr.com/ru/rss/hubs/all/",
     ]
     news_items = []
+    first_link = None
     for url in feeds:
         try:
             feed = feedparser.parse(url)
@@ -29,13 +30,15 @@ def fetch_recent_news(limit: int = 6) -> str:
                 link = entry.get("link", "").strip()
                 summary = re.sub(r"<[^>]+>", "", entry.get("summary", "")).strip()
                 if title:
+                    if not first_link:
+                        first_link = link
                     news_items.append(f"- Заголовок: {title}\n  Ссылка: {link}\n  Кратко: {summary[:250]}")
         except Exception as e:
             print(f"Ошибка при чтении ленты {url}: {e}", file=sys.stderr)
 
     if not news_items:
-        return "В мире технологий активно развиваются мультимодальные модели искусственного интеллекта и новые устройства."
-    return "\n\n".join(news_items[:10])
+        return "В мире технологий активно развиваются мультимодальные модели искусственного интеллекта и новые устройства.", None
+    return "\n\n".join(news_items[:10]), first_link
 
 def generate_digest(client: genai.Client, raw_news: str) -> tuple[str, str, str]:
     prompt = f"""
@@ -94,8 +97,21 @@ def generate_digest(client: genai.Client, raw_news: str) -> tuple[str, str, str]
 
     return digest_text, dict_text, img_prompt
 
+def extract_cover_image(link: str) -> str | None:
+    """Извлекает обложку статьи через OpenGraph тег og:image."""
+    try:
+        req = requests.get(link, headers={"User-Agent": "Mozilla/5.0"}, timeout=6)
+        match = re.search(r'property=["\']og:image["\']\s+content=["\']([^"\']+)["\']', req.text, re.IGNORECASE)
+        if not match:
+            match = re.search(r'content=["\']([^"\']+)["\']\s+property=["\']og:image["\']', req.text, re.IGNORECASE)
+        if match:
+            return match.group(1).strip()
+    except Exception as e:
+        print(f"Не удалось извлечь обложку из {link}: {e}", file=sys.stderr)
+    return None
+
 def generate_image(client: genai.Client, prompt: str) -> bytes | None:
-    print(f"Генерация иллюстрации по промпту: {prompt[:100]}...")
+    print(f"Попытка генерации иллюстрации Imagen: {prompt[:100]}...")
     try:
         result = client.models.generate_images(
             model="imagen-3.0-generate-002",
@@ -105,15 +121,20 @@ def generate_image(client: genai.Client, prompt: str) -> bytes | None:
         if result.generated_images:
             return result.generated_images[0].image.image_bytes
     except Exception as e:
-        print(f"Предупреждение: генерация Imagen не удалась ({e}). Пост будет отправлен без фото.", file=sys.stderr)
+        print(f"Imagen недоступен ({e}), будет использована оригинальная обложка статьи.", file=sys.stderr)
     return None
 
-def send_telegram_photo(token: str, chat_id: str, photo_bytes: bytes) -> int | None:
+def send_telegram_photo(token: str, chat_id: str, photo: bytes | str) -> int | None:
     url = f"https://api.telegram.org/bot{token}/sendPhoto"
-    files = {"photo": ("news.jpg", io.BytesIO(photo_bytes), "image/jpeg")}
     data = {"chat_id": chat_id}
     
-    resp = requests.post(url, data=data, files=files, timeout=30)
+    if isinstance(photo, str):
+        data["photo"] = photo
+        resp = requests.post(url, data=data, timeout=30)
+    else:
+        files = {"photo": ("news.jpg", io.BytesIO(photo), "image/jpeg")}
+        resp = requests.post(url, data=data, files=files, timeout=30)
+
     if resp.status_code == 200:
         return resp.json().get("result", {}).get("message_id")
     print(f"Ошибка отправки фото: {resp.text}", file=sys.stderr)
@@ -146,13 +167,17 @@ def main():
 
     client = genai.Client(api_key=gemini_key)
 
-    raw_news = fetch_recent_news(limit=6)
+    raw_news, first_link = fetch_recent_news(limit=6)
     digest_text, dict_text, img_prompt = generate_digest(client, raw_news)
-    photo_data = generate_image(client, img_prompt)
+    
+    photo = generate_image(client, img_prompt)
+    if not photo and first_link:
+        print("Поиск обложки из оригинальной статьи...")
+        photo = extract_cover_image(first_link)
 
     print("Публикация в Telegram...")
-    if photo_data:
-        send_telegram_photo(tg_token, tg_chat_id, photo_data)
+    if photo:
+        send_telegram_photo(tg_token, tg_chat_id, photo)
 
     main_msg_id = send_telegram_message(tg_token, tg_chat_id, digest_text)
 
