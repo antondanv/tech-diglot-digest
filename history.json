@@ -106,24 +106,29 @@
     ]
   },
   {
-    "topic": "Технологии",
-    "headline": "Windows 11 стала работать быстрее без участия пользователя 🚀",
-    "text": "Последнее обновление system незаметно оптимизировало потребление ресурсов. Теперь компьютер в режиме простоя занимает значительно меньше оперативной memory.\n\nУлучшенное управление process позволяет программам запускаться более плавно, а некоторые элементы стали реагировать на действия пользователя быстрее.",
+    "topic": "Обновление Windows 11 26H2",
+    "headline": "Windows 11 26H2 незаметно ускорила работу системы и снизила нагрузку на ОЗУ 🚀",
+    "text": "Обновление Windows 11 26H2 принесло важные улучшения производительности, о которых Microsoft не стала объявлять официально. Пользователи и эксперты заметили значительное снижение потребления оперативной памяти, что стало возможным благодаря проведенной optimization фоновых процессов.\n\nСистема получила профиль низкой latency для сторонних программ, который ранее работал только с фирменным софтом. Теперь запуск приложений и взаимодействие с меню стали происходить гораздо быстрее, а общая responsiveness интерфейса заметно возросла на разном hardware.",
     "dictionary": [
       {
-        "word": "system",
-        "transcription": "ˈsɪstəm",
-        "translation": "система"
+        "word": "optimization",
+        "transcription": "ˌɒptɪmaɪˈzeɪʃn",
+        "translation": "оптимизация"
       },
       {
-        "word": "memory",
-        "transcription": "ˈmeməri",
-        "translation": "память"
+        "word": "latency",
+        "transcription": "ˈleɪtənsi",
+        "translation": "задержка"
       },
       {
-        "word": "process",
-        "transcription": "ˈprəʊses",
-        "translation": "процесс"
+        "word": "responsiveness",
+        "transcription": "rɪˈspɒnsɪvnəs",
+        "translation": "отзывчивость"
+      },
+      {
+        "word": "hardware",
+        "transcription": "ˈhɑːrdwer",
+        "translation": "оборудование"
       }
     ],
     "source_url": "https://3dnews.ru/1149487/windows-11-26h2-vtiharya-uskorila-rabotu-os-i-sokratila-potreblenie-operativnoy-pamyati",

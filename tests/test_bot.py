@@ -74,6 +74,38 @@ class ContentTests(unittest.TestCase):
     def test_valid_post(self):
         self.assertEqual(bot.validate_post(example_post())["topic"], "Новый гаджет")
 
+    def test_advanced_words_and_hyphenated_term_are_supported(self):
+        post = example_post()
+        post["text"] = (
+            "Обновление снижает latency, улучшает throughput и ускоряет fine-tuning."
+        )
+        post["dictionary"] = [
+            {
+                "word": "latency",
+                "transcription": "ˈleɪtənsi",
+                "translation": "задержка",
+            },
+            {
+                "word": "throughput",
+                "transcription": "ˈθruːpʊt",
+                "translation": "пропускная способность",
+            },
+            {
+                "word": "fine-tuning",
+                "transcription": "ˈfaɪn ˌtjuːnɪŋ",
+                "translation": "дообучение",
+            },
+        ]
+        self.assertEqual(len(bot.validate_post(post)["dictionary"]), 3)
+
+    def test_new_batch_does_not_repeat_recent_word_with_different_case(self):
+        with self.assertRaises(ValueError):
+            bot.check_new_vocabulary([example_post()], {"NEWS"})
+
+    def test_new_batch_uses_different_words_between_posts(self):
+        with self.assertRaises(ValueError):
+            bot.check_new_vocabulary([example_post(), example_post()])
+
     def test_legacy_dictionary_migration(self):
         post = example_post()
         post["dictionary"] = bot.dictionary_text(post)
@@ -104,6 +136,12 @@ class ContentTests(unittest.TestCase):
             post["text"] += suffix
             with self.assertRaises(ValueError):
                 bot.validate_post(post)
+
+    def test_dictionary_comment_cannot_contain_source_links(self):
+        post = example_post()
+        post["dictionary"][0]["translation"] += " https://example.com"
+        with self.assertRaises(ValueError):
+            bot.validate_post(post)
 
     def test_fabricated_source_is_rejected(self):
         with self.assertRaises(ValueError):
@@ -141,7 +179,7 @@ class ContentTests(unittest.TestCase):
         self.assertEqual(result["topic"], post["topic"])
         self.assertEqual(
             client.models.generate_content.call_args.kwargs["model"],
-            "gemini-3.1-flash-lite",
+            "gemini-3.8-flash",
         )
 
     def test_bad_model_output_is_retried_before_return(self):

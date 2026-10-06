@@ -8,7 +8,7 @@ import time
 
 import requests
 
-from article_media import image_bytes, valid_url
+from article_media import image_bytes
 
 
 class TelegramError(RuntimeError):
@@ -228,14 +228,8 @@ class Telegram:
             "Не получена копия поста в обсуждении. Словарь не отправлен; повторный запуск продолжит этот пост. Проверьте права бота и авто-пересылку."
         )
 
-    def comment(self, discussion_id, root_id, dictionary, source_url=None):
+    def comment(self, discussion_id, root_id, dictionary):
         formatted = telegram_html(dictionary)
-        if source_url:
-            if not valid_url(source_url):
-                raise ValueError("Некорректная ссылка на источник")
-            formatted += (
-                f'\n\n<a href="{html.escape(source_url, quote=True)}">Источник</a>'
-            )
         message = self.call(
             "sendMessage",
             {

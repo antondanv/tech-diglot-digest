@@ -4,6 +4,7 @@ import json
 import os
 import re
 from datetime import datetime, timedelta, timezone
+from pathlib import Path
 
 import requests
 from google.genai import types
@@ -82,15 +83,20 @@ def grounded_pool(response, now):
 def search_news(client, history):
     now = datetime.now(timezone.utc)
     schema = json.dumps(SearchStories.model_json_schema(), ensure_ascii=False)
-    prompt = f"""Сегодня {now.isoformat()}. ОБЯЗАТЕЛЬНО выполни Google Search.
-Найди 6–9 разных реальных новостей за последние 48 часов: искусственный интеллект,
-новые гаджеты, вычисления, научные открытия. Предпочитай первоисточники и редакционные статьи.
-Каждая summary содержит только подтверждённые факты этой статьи. Не добавляй домыслы.
-source_url скопируй из результатов поиска, published_at — фактическая дата публикации с часовым поясом.
-Не включай рекламу, старые события, прогнозы как свершившиеся факты и повторные новости:
-{json.dumps([item.get("topic") for item in history[-30:]], ensure_ascii=False)}
-Ответ: только JSON, без Markdown и номеров сносок. Схема: {schema}
-"""
+    prompt = (Path(__file__).resolve().parent / "prompts/search.txt").read_text(
+        encoding="utf-8"
+    )
+    values = {
+        "now": now.isoformat(),
+        "start": (now - timedelta(hours=48)).isoformat(),
+        "recent_topics": json.dumps(
+            [item.get("headline") or item.get("topic") for item in history[-30:]],
+            ensure_ascii=False,
+        ),
+        "schema": schema,
+    }
+    for name, value in values.items():
+        prompt = prompt.replace("{{" + name + "}}", value)
     models = (os.getenv("GEMINI_SEARCH_MODELS") or "gemini-3.8-flash").split(",")
     errors = []
     for model in filter(None, (value.strip() for value in models)):
