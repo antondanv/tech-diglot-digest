@@ -1,0 +1,34 @@
+name: Daily Diglot Weave Digest
+
+on:
+  schedule:
+    # Ежедневно в 21:00 UTC (00:00 по Московскому времени)
+    - cron: '0 21 * * *'
+  # Кнопка для ручного запуска в интерфейсе GitHub Actions
+  workflow_dispatch:
+
+jobs:
+  run-digest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Generate and Send Digest
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python bot.py
