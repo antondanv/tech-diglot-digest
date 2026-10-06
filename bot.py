@@ -38,14 +38,14 @@ def generate_digest(client: genai.Client) -> tuple[str, str, str]:
 (Сюда помести подробный промпт на английском языке для генерации красивой, современной фотореалистичной или 3D-иллюстрации к главной новости)
 """
     print("Генерация дайджеста через Gemini с поиском новостей...")
-    response = client.models.generate_content(
-        model="gemini-2.5-flash",
-        contents=prompt,
+    chat = client.chats.create(
+        model="gemini-3.8-flash",
         config=types.GenerateContentConfig(
             tools=[types.Tool(google_search=types.GoogleSearch())],
             temperature=0.7,
         )
     )
+    response = chat.send_message(prompt)
 
     full_text = response.text or ""
     
