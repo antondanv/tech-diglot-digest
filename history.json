@@ -180,5 +180,53 @@
       20,
       21
     ]
+  },
+  {
+    "topic": "Иск против McDonald's из-за алгоритмов ценообразования",
+    "headline": "McDonald's в США обвинили в ценовом сговоре с помощью ИИ 🍔",
+    "text": "В американский суд подали коллективный lawsuit против компании из-за использования алгоритмов для координации цен.\n\nВ самой сети эти allegations назвали необоснованными, отметив, что система ценообразования носит лишь рекомендательный характер, а не анализирует transactions для принудительного повышения стоимости.",
+    "dictionary": [
+      {
+        "word": "lawsuit",
+        "transcription": "ˈlɔːsuːt",
+        "translation": "судебный иск"
+      },
+      {
+        "word": "allegations",
+        "transcription": "ˌælɪˈɡeɪʃənz",
+        "translation": "обвинения"
+      },
+      {
+        "word": "transactions",
+        "transcription": "trænˈzækʃənz",
+        "translation": "транзакции"
+      }
+    ],
+    "source_url": "https://expert.ru/news/protiv-mcdonalds-v-ssha-podali-isk-iz-za-zavysheniya-tsen-s-pomoschyu-ii",
+    "channel_message_id": 22,
+    "discussion_message_id": 22,
+    "comment_message_id": 23,
+    "article_url": "https://expert.ru/news/protiv-mcdonalds-v-ssha-podali-isk-iz-za-zavysheniya-tsen-s-pomoschyu-ii",
+    "image_urls": [
+      "https://expert.ru/storage/2026/10/06/fdb6e3d32ae2c1e508af7ec2a9192cf02325286e.jpg"
+    ],
+    "image_hashes": [
+      "c98aad40ad96a7efacaa801a378850e3927928a1c7603a68809cc4d86cb15eec"
+    ],
+    "image_fingerprints": [
+      "0727e39360315723",
+      "0f27678761735f27",
+      "00083c24180c1a2a",
+      "0707620321332737",
+      "0707364333313337",
+      "072723433133172f",
+      "1727433133932f37",
+      "0713334130392f13",
+      "0707234331332737",
+      "1b9f0d6f83c75fdf"
+    ],
+    "channel_message_ids": [
+      22
+    ]
   }
 ]
