@@ -4,6 +4,7 @@ import re
 import io
 import json
 import random
+import time
 import requests
 import feedparser
 from google import genai
@@ -236,6 +237,8 @@ def main():
     # 2. Отправляем словарь в комментарии под этим постом
     dict_text = current_post.get("dictionary", "")
     if msg_id and dict_text:
+        print("Пауза 2 сек перед отправкой комментария...")
+        time.sleep(2)
         print("Отправка словаря (3-4 слова) в комментарии...")
         send_telegram_comment(tg_token, tg_chat_id, discussion_id, msg_id, dict_text)
 
