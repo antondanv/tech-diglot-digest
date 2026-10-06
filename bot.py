@@ -87,7 +87,7 @@ def generate_daily_batch(client: genai.Client) -> list[dict]:
 1. Пост посвящен ТОЛЬКО одной конкретной теме/событию.
 2. В текст на русском языке органично вплети РОВНО 3–4 общеупотребительных английских слова (глаголы, прилагательные, связки, простые существительные). Избегай узких технических терминов.
 3. Выдели каждое английское слово полужирным шрифтом (**word**).
-4. НЕ вставляй никаких внешних ссылок, URL или сносок в текст поста. Текст должен быть чистым, емким и законченным.
+4. НЕ вставляй никаких внешних ссылок, URL или сносок в текст поста. Длина текста поста СТРОГО до 850 символов (чтобы он гарантированно поместился в подпись к фото в Telegram).
 5. Создай мини-словарь ДЛЯ КОММЕНТАРИЕВ ровно из этих 3–4 слов с транскрипцией и переводом на русский.
 
 Ответ верни строго в формате валидного JSON-массива из 3 объектов:
@@ -135,20 +135,24 @@ def generate_daily_batch(client: genai.Client) -> list[dict]:
 
     return posts
 
-def send_telegram_photo(token: str, chat_id: str, photo_url: str) -> int | None:
-    url = f"https://api.telegram.org/bot{token}/sendPhoto"
-    resp = requests.post(url, data={"chat_id": chat_id, "photo": photo_url}, timeout=30)
-    if resp.status_code == 200:
-        return resp.json().get("result", {}).get("message_id")
-    print(f"Не удалось отправить фото: {resp.text}", file=sys.stderr)
-    return None
+def send_telegram_post(token: str, chat_id: str, photo_url: str | None, text: str) -> int | None:
+    """Отправляет изображение и текст ОДНИМ сообщением через sendPhoto с caption."""
+    if photo_url:
+        url = f"https://api.telegram.org/bot{token}/sendPhoto"
+        data = {
+            "chat_id": chat_id,
+            "photo": photo_url,
+            "caption": text[:1024],
+            "parse_mode": "Markdown"
+        }
+        resp = requests.post(url, data=data, timeout=30)
+        if resp.status_code == 200:
+            return resp.json().get("result", {}).get("message_id")
+        print(f"Ошибка sendPhoto (попробуем отправить текстом): {resp.text}", file=sys.stderr)
 
-def send_telegram_message(token: str, chat_id: str, text: str, reply_to_id: int | None = None) -> int | None:
+    # Резервная отправка текстом, если фото не подошло
     url = f"https://api.telegram.org/bot{token}/sendMessage"
     payload = {"chat_id": chat_id, "text": text[:4000], "parse_mode": "Markdown"}
-    if reply_to_id:
-        payload["reply_to_message_id"] = reply_to_id
-
     res = requests.post(url, json=payload, timeout=30)
     if res.status_code != 200:
         payload.pop("parse_mode", None)
@@ -156,6 +160,37 @@ def send_telegram_message(token: str, chat_id: str, text: str, reply_to_id: int 
         res.raise_for_status()
 
     return res.json().get("result", {}).get("message_id")
+
+def send_telegram_comment(token: str, channel_id: str, discussion_id: str | None, channel_msg_id: int, dict_text: str):
+    """Отправляет словарь в группу обсуждения под постом канала."""
+    if discussion_id:
+        url = f"https://api.telegram.org/bot{token}/sendMessage"
+        payload = {
+            "chat_id": discussion_id,
+            "text": dict_text[:4000],
+            "parse_mode": "Markdown",
+            "reply_parameters": {
+                "chat_id": channel_id,
+                "message_id": channel_msg_id
+            }
+        }
+        res = requests.post(url, json=payload, timeout=30)
+        if res.status_code == 200:
+            print("Словарь отправлен прямо в комментарии к посту в группе обсуждения!")
+            return res.json().get("result", {}).get("message_id")
+        else:
+            print(f"Предупреждение: не удалось отправить в группу обсуждения {discussion_id} ({res.text}). Пробуем в канал...", file=sys.stderr)
+
+    # Резервный вариант, если бот не добавлен в группу обсуждения
+    url = f"https://api.telegram.org/bot{token}/sendMessage"
+    payload = {
+        "chat_id": channel_id,
+        "text": dict_text[:4000],
+        "parse_mode": "Markdown",
+        "reply_to_message_id": channel_msg_id
+    }
+    res = requests.post(url, json=payload, timeout=30)
+    return res.json().get("result", {}).get("message_id") if res.status_code == 200 else None
 
 def load_queue() -> list[dict]:
     if os.path.exists(QUEUE_FILE):
@@ -174,11 +209,11 @@ def main():
     gemini_key = get_required_env("GEMINI_API_KEY")
     tg_token = get_required_env("TELEGRAM_BOT_TOKEN")
     tg_chat_id = get_required_env("TELEGRAM_CHAT_ID")
+    discussion_id = os.getenv("DISCUSSION_CHAT_ID")
 
     client = genai.Client(api_key=gemini_key)
     queue = load_queue()
 
-    # Если очередь пуста (утренний запуск или первый старт) — генерируем новую партию из 3 постов
     if not queue:
         print("Очередь пуста. Генерируем 3 новых поста на сегодня с разными темами...")
         queue = generate_daily_batch(client)
@@ -186,25 +221,23 @@ def main():
             print("Не удалось сгенерировать посты.", file=sys.stderr)
             sys.exit(1)
 
-    # Достаем следующий пост из очереди
     current_post = queue.pop(0)
     save_queue(queue)
     print(f"Публикуем пост: {current_post.get('topic', 'Новость')} (в очереди осталось: {len(queue)})")
 
-    # 1. Отправляем фото статьи (если есть)
-    img_url = current_post.get("image_url")
-    if img_url:
-        send_telegram_photo(tg_token, tg_chat_id, img_url)
+    # 1. Отправляем изображение и текст ОДНИМ сообщением
+    msg_id = send_telegram_post(
+        tg_token,
+        tg_chat_id,
+        current_post.get("image_url"),
+        current_post.get("text", "")
+    )
 
-    # 2. Отправляем текст поста
-    post_text = current_post.get("text", "")
-    msg_id = send_telegram_message(tg_token, tg_chat_id, post_text)
-
-    # 3. Отправляем словарь в комментарии (ответом к посту)
+    # 2. Отправляем словарь в комментарии под этим постом
     dict_text = current_post.get("dictionary", "")
     if msg_id and dict_text:
         print("Отправка словаря (3-4 слова) в комментарии...")
-        send_telegram_message(tg_token, tg_chat_id, dict_text, reply_to_id=msg_id)
+        send_telegram_comment(tg_token, tg_chat_id, discussion_id, msg_id, dict_text)
 
     print("Публикация завершена успешно!")
 
