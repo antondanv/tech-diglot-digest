@@ -3,6 +3,7 @@ import sys
 import re
 import io
 import requests
+import feedparser
 from google import genai
 from google.genai import types
 
@@ -13,17 +14,42 @@ def get_required_env(name: str) -> str:
         sys.exit(1)
     return value
 
-def generate_digest(client: genai.Client) -> tuple[str, str, str]:
-    prompt = """
+def fetch_recent_news(limit: int = 6) -> str:
+    """Собирает самые свежие новости за последние 24 часа из Google News и профильных изданий."""
+    feeds = [
+        "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=ru&gl=RU&ceid=RU:ru",
+        "https://habr.com/ru/rss/hubs/all/",
+    ]
+    news_items = []
+    for url in feeds:
+        try:
+            feed = feedparser.parse(url)
+            for entry in feed.entries[:limit]:
+                title = entry.get("title", "").strip()
+                link = entry.get("link", "").strip()
+                summary = re.sub(r"<[^>]+>", "", entry.get("summary", "")).strip()
+                if title:
+                    news_items.append(f"- Заголовок: {title}\n  Ссылка: {link}\n  Кратко: {summary[:250]}")
+        except Exception as e:
+            print(f"Ошибка при чтении ленты {url}: {e}", file=sys.stderr)
+
+    if not news_items:
+        return "В мире технологий активно развиваются мультимодальные модели искусственного интеллекта и новые устройства."
+    return "\n\n".join(news_items[:10])
+
+def generate_digest(client: genai.Client, raw_news: str) -> tuple[str, str, str]:
+    prompt = f"""
 Ты профессиональный редактор и преподаватель английского языка. Твоя задача — подготовить ежедневную сводку новостей из мира технологий, искусственного интеллекта и гаджетов по методу двуязычного чтения (Diglot Weave).
 
+Вот актуальные новости за последние 24 часа:
+{raw_news}
+
 Строгие требования:
-1. Найди самые актуальные и значимые события за последние 24 часа в мире технологий, искусственного интеллекта, гаджетов и IT в России и мире.
-2. Сформируй дайджест ровно из 3 ключевых событий на русском языке.
-3. Вплети в русский текст 12–15 общеупотребительных английских слов (глаголы, прилагательные, связующие слова и базовые существительные повседневного языка, избегая узких IT-терминов). Контекст предложений должен позволять интуитивно понять значение каждого слова.
-4. Выдели каждое английское слово полужирным шрифтом (**word**).
-5. Укажи кликабельные ссылки на первоисточники новостей в формате [Название источника](URL).
-6. НЕ пиши словарь прямо в основном тексте.
+1. Выбери из предоставленных новостей ровно 3 ключевых и самых интересных события и сформируй дайджест на русском языке.
+2. Вплети в русский текст ровно 12–15 общеупотребительных английских слов (глаголы, прилагательные, связующие слова и базовые существительные повседневного языка, избегая узких IT-терминов). Контекст предложений должен позволять интуитивно понять значение каждого слова.
+3. Выдели каждое английское слово полужирным шрифтом (**word**).
+4. Обязательно добавь кликабельные ссылки на первоисточники новостей из списка выше в формате [Название источника](URL).
+5. НЕ пиши словарь прямо в основном дайджесте.
 
 Формат вывода должен быть строго разделен на три секции:
 
@@ -35,25 +61,33 @@ def generate_digest(client: genai.Client) -> tuple[str, str, str]:
 (Сюда помести список всех 12–15 использованных английских слов с транскрипцией и переводом на русский язык)
 
 [IMAGE_PROMPT]
-(Сюда помести подробный промпт на английском языке для генерации красивой, современной фотореалистичной или 3D-иллюстрации к главной новости)
+(Сюда помести подробный промпт на английском языке для генерации красивой, современной иллюстрации к главной новости)
 """
-    print("Генерация дайджеста через Gemini с поиском новостей...")
-    chat = client.chats.create(
-        model="gemini-3.8-flash",
-        config=types.GenerateContentConfig(
-            tools=[types.Tool(google_search=types.GoogleSearch())],
-            temperature=0.7,
-        )
-    )
-    response = chat.send_message(prompt)
+    print("Генерация дайджеста через Gemini...")
+    models_to_try = ["gemini-3.5-flash-lite", "gemini-3.8-flash"]
+    response = None
 
-    full_text = response.text or ""
-    
-    # Парсим секции
+    for model_name in models_to_try:
+        try:
+            print(f"Пробуем модель {model_name}...")
+            response = client.models.generate_content(
+                model=model_name,
+                contents=prompt,
+                config=types.GenerateContentConfig(temperature=0.7),
+            )
+            if response and response.text:
+                break
+        except Exception as e:
+            print(f"Ошибка при вызове {model_name}: {e}", file=sys.stderr)
+
+    if not response or not response.text:
+        raise RuntimeError("Не удалось сгенерировать контент ни одной из доступных моделей Gemini.")
+
+    full_text = response.text
     digest_match = re.search(r"\[DIGEST\](.*?)(\[DICTIONARY\]|$)", full_text, re.DOTALL | re.IGNORECASE)
     dict_match = re.search(r"\[DICTIONARY\](.*?)(\[IMAGE_PROMPT\]|$)", full_text, re.DOTALL | re.IGNORECASE)
     img_match = re.search(r"\[IMAGE_PROMPT\](.*)$", full_text, re.DOTALL | re.IGNORECASE)
-    
+
     digest_text = digest_match.group(1).strip() if digest_match else full_text.strip()
     dict_text = dict_match.group(1).strip() if dict_match else "📖 Словарь формируется..."
     img_prompt = img_match.group(1).strip() if img_match else "Modern high-tech illustration representing artificial intelligence and future technology"
@@ -66,15 +100,12 @@ def generate_image(client: genai.Client, prompt: str) -> bytes | None:
         result = client.models.generate_images(
             model="imagen-3.0-generate-002",
             prompt=prompt,
-            config=dict(
-                number_of_images=1,
-                aspect_ratio="16:9",
-            )
+            config=dict(number_of_images=1, aspect_ratio="16:9")
         )
         if result.generated_images:
             return result.generated_images[0].image.image_bytes
     except Exception as e:
-        print(f"Предупреждение: генерация Imagen не удалась ({e}). Пост будет отправлен без сгенерированного фото.", file=sys.stderr)
+        print(f"Предупреждение: генерация Imagen не удалась ({e}). Пост будет отправлен без фото.", file=sys.stderr)
     return None
 
 def send_telegram_photo(token: str, chat_id: str, photo_bytes: bytes) -> int | None:
@@ -101,7 +132,6 @@ def send_telegram_message(token: str, chat_id: str, text: str, reply_to_id: int 
 
     res = requests.post(url, json=payload, timeout=30)
     if res.status_code != 200:
-        # Резервная отправка без Markdown (если в тексте неэкранированные символы)
         print("Предупреждение: ошибка разметки Markdown, отправка обычным текстом...")
         payload.pop("parse_mode", None)
         res = requests.post(url, json=payload, timeout=30)
@@ -116,18 +146,16 @@ def main():
 
     client = genai.Client(api_key=gemini_key)
 
-    digest_text, dict_text, img_prompt = generate_digest(client)
+    raw_news = fetch_recent_news(limit=6)
+    digest_text, dict_text, img_prompt = generate_digest(client, raw_news)
     photo_data = generate_image(client, img_prompt)
 
     print("Публикация в Telegram...")
-    # 1. Если есть фото — отправляем его
     if photo_data:
         send_telegram_photo(tg_token, tg_chat_id, photo_data)
 
-    # 2. Отправляем основной пост с дайджестом
     main_msg_id = send_telegram_message(tg_token, tg_chat_id, digest_text)
 
-    # 3. Отправляем словарь ответом (в комментарии) к основному посту
     if main_msg_id:
         print("Отправка словаря в комментарии к посту...")
         send_telegram_message(tg_token, tg_chat_id, dict_text, reply_to_id=main_msg_id)
