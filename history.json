@@ -296,5 +296,50 @@
       24,
       25
     ]
+  },
+  {
+    "topic": "Откат автоматизации в IT-индустрии",
+    "headline": "Компании возвращают людей на позиции, которые ранее отдали ИИ 🤖",
+    "text": "Многие IT-компании начали возвращать живых сотрудников в поддержку после неудачных попыток полной automation процессов.\n\nВыяснилось, что проверка results работы нейросетей требует столько же времени и квалификации, сколько создание контента с нуля, поэтому компаниям пришлось изменить свой approach.",
+    "dictionary": [
+      {
+        "word": "automation",
+        "transcription": "ˌɔːtəˈmeɪʃən",
+        "translation": "автоматизация"
+      },
+      {
+        "word": "results",
+        "transcription": "rɪˈzʌlts",
+        "translation": "результаты"
+      },
+      {
+        "word": "approach",
+        "transcription": "əˈprəʊtʃ",
+        "translation": "подход"
+      }
+    ],
+    "source_url": "https://habr.com/ru/articles/1090612/",
+    "channel_message_id": 26,
+    "discussion_message_id": 28,
+    "comment_message_id": 29,
+    "article_url": "https://habr.com/ru/articles/1090612/",
+    "image_urls": [
+      "https://habrastorage.org/getpro/habr/upload_files/a50/b68/81e/a50b6881eaec5613396c4c25b77f15c8.png"
+    ],
+    "image_hashes": [
+      "68f528dcf58288cf06999055e57513b6cc7787444e7608ba364be65d26c0f3dd"
+    ],
+    "image_fingerprints": [
+      "f2e38f479b4376a6",
+      "49919999bab2264f",
+      "eacd9d8da5cdcd0a",
+      "b4535b3b9332302c",
+      "5569ed6d2d6b6357",
+      "d89434969591d313",
+      "9c327a325210b0b9"
+    ],
+    "channel_message_ids": [
+      26
+    ]
   }
 ]
