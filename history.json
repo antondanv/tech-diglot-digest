@@ -407,5 +407,51 @@
       28,
       29
     ]
+  },
+  {
+    "topic": "Особенности внедрения ИИ в российские компании",
+    "headline": "Почему российский бизнес не спешит заменять сотрудников нейросетями 🤖",
+    "text": "В отличие от западных корпораций, российский бизнес рассматривает нейросети как вспомогательный инструмент, а не как полноценную замену человеку. Из-за дефицита кадров компании стремятся повысить efficiency текущих сотрудников, а не сокращать штат.\n\nРоссийский подход предполагает точечное внедрение технологий с обязательным ручным контролем. Такая консервативная strategy позволяет избежать ошибок автономных агентов и сохраняет stability процессов, даже если ИИ выдает неточный результат.",
+    "dictionary": [
+      {
+        "word": "efficiency",
+        "transcription": "ɪˈfɪʃnsi",
+        "translation": "эффективность"
+      },
+      {
+        "word": "strategy",
+        "transcription": "ˈstrætədʒi",
+        "translation": "стратегия"
+      },
+      {
+        "word": "stability",
+        "transcription": "stəˈbɪləti",
+        "translation": "стабильность"
+      }
+    ],
+    "source_url": "https://www.computerra.ru/367195/ii-kak-instrument/",
+    "channel_message_id": 30,
+    "discussion_message_id": 34,
+    "comment_message_id": 35,
+    "article_url": "https://www.computerra.ru/367195/ii-kak-instrument/",
+    "image_urls": [
+      "https://www.computerra.ru/wp-content/uploads/2026/10/ii-kak-instrument-a-ne-palach-pochemu-rossiyskiy-1.png"
+    ],
+    "image_hashes": [
+      "25c4ad280831c8baba6355773b4c4081fd196496c7e7f946e7d1720b7415f8e6"
+    ],
+    "image_fingerprints": [
+      "deeab61e3b11385c",
+      "3eb63a8f8d8c8c86",
+      "ceaa2da7e7e4c6e2",
+      "0dcd8ac3c7c343c9",
+      "ceaa2ca7e7e4c6e2",
+      "8b484d67c6e286cb",
+      "47d6b7b1b1f1d1b0",
+      "616999dcda5ae8bc"
+    ],
+    "channel_message_ids": [
+      30
+    ]
   }
 ]
