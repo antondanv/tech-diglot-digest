@@ -1,1 +1,84 @@
-[]
+[
+  {
+    "headline": "Почему российский бизнес не спешит заменять сотрудников нейросетями 🤖",
+    "topic": "Особенности внедрения ИИ в российские компании",
+    "text": "В отличие от западных корпораций, российский бизнес рассматривает нейросети как вспомогательный инструмент, а не как полноценную замену человеку. Из-за дефицита кадров компании стремятся повысить efficiency текущих сотрудников, а не сокращать штат.\n\nРоссийский подход предполагает точечное внедрение технологий с обязательным ручным контролем. Такая консервативная strategy позволяет избежать ошибок автономных агентов и сохраняет stability процессов, даже если ИИ выдает неточный результат.",
+    "dictionary": [
+      {
+        "word": "efficiency",
+        "transcription": "ɪˈfɪʃnsi",
+        "translation": "эффективность"
+      },
+      {
+        "word": "strategy",
+        "transcription": "ˈstrætədʒi",
+        "translation": "стратегия"
+      },
+      {
+        "word": "stability",
+        "transcription": "stəˈbɪləti",
+        "translation": "стабильность"
+      }
+    ],
+    "source_url": "https://www.computerra.ru/367195/ii-kak-instrument/",
+    "article_url": "https://www.computerra.ru/367195/ii-kak-instrument/",
+    "image_urls": [
+      "https://www.computerra.ru/wp-content/uploads/2026/10/ii-kak-instrument-a-ne-palach-pochemu-rossiyskiy-1.png"
+    ],
+    "image_hashes": [
+      "25c4ad280831c8baba6355773b4c4081fd196496c7e7f946e7d1720b7415f8e6"
+    ],
+    "image_fingerprints": [
+      "deeab61e3b11385c",
+      "3eb63a8f8d8c8c86",
+      "ceaa2da7e7e4c6e2",
+      "0dcd8ac3c7c343c9",
+      "ceaa2ca7e7e4c6e2",
+      "8b484d67c6e286cb",
+      "47d6b7b1b1f1d1b0",
+      "616999dcda5ae8bc"
+    ]
+  },
+  {
+    "headline": "Россия прорабатывает размещение ИИ-дата-центров в дружественных странах 🌐",
+    "topic": "Строительство ЦОДов для ИИ за рубежом",
+    "text": "Правительство обсуждает создание дата-центров для нужд искусственного интеллекта на территории Беларуси и Казахстана. Это решение продиктовано дефицитом вычислительных мощностей и электроэнергии внутри России.\n\nРазмещение объектов за рубежом позволит быстрее наращивать infrastructure для отечественных моделей. Главным challenge остаются законодательные requirement, согласно которым данные пользователей должны храниться на территории РФ, что потребует разработки особого правового режима.",
+    "dictionary": [
+      {
+        "word": "infrastructure",
+        "transcription": "ˈɪnfrəˌstrʌktʃə",
+        "translation": "инфраструктура"
+      },
+      {
+        "word": "challenge",
+        "transcription": "ˈtʃælɪndʒ",
+        "translation": "вызов"
+      },
+      {
+        "word": "requirement",
+        "transcription": "rɪˈkwaɪəmənt",
+        "translation": "требование"
+      }
+    ],
+    "source_url": "https://ru.themoscowtimes.com/2026/10/08/rossiya-nachala-obsuzhdat-razmeschenie-data-tsentrov-dlya-iivdruzhestvennih-stranah-a208103",
+    "article_url": "https://ru.themoscowtimes.com/2026/10/08/rossiya-nachala-obsuzhdat-razmeschenie-data-tsentrov-dlya-iivdruzhestvennih-stranah-a208103",
+    "image_urls": [
+      "https://ru.themoscowtimes.com/image/og/33/208103__3350499cad888805dfb695efd99a55f3.jpg"
+    ],
+    "image_hashes": [
+      "087747dfd779f9e0a48a58e8064d5c72e71b8095e6f4d30ffd96c39872343964"
+    ],
+    "image_fingerprints": [
+      "00002c9ea66e60e0",
+      "0020951c2b094123",
+      "00204d8e96162008",
+      "004026371b1b8c4c",
+      "004027331b01840c",
+      "000052696a66068e",
+      "00805573ac24068e",
+      "004027131515444e",
+      "008006376b2b8c0c",
+      "000054afb3931838"
+    ]
+  }
+]

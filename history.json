@@ -341,5 +341,71 @@
     "channel_message_ids": [
       26
     ]
+  },
+  {
+    "topic": "Разработка ИИ-сервиса для кардиотокографии",
+    "headline": "Российские ученые создали ИИ-ассистента для анализа КТГ у младенцев 👶",
+    "text": "Специалисты НМИЦ имени Кулакова и РТУ МИРЭА представили ИИ-сервис, который помогает врачам interpret данные кардиотокографии. Система выступает как цифровой assistant, позволяющий мгновенно оценить состояние плода по снимку графика на смартфоне.\n\nАлгоритм использует современные архитектуры трансформеров для обработки изображений бумажных лент. Решение уже показало accuracy прогнозирования перинатальных исходов на уровне 86%, что позволяет медикам принимать верные решения в критические моменты.",
+    "dictionary": [
+      {
+        "word": "assistant",
+        "transcription": "əˈsɪstənt",
+        "translation": "ассистент"
+      },
+      {
+        "word": "interpret",
+        "transcription": "ɪnˈtɜːprɪt",
+        "translation": "интерпретировать"
+      },
+      {
+        "word": "accuracy",
+        "transcription": "ˈækjərəsi",
+        "translation": "точность"
+      }
+    ],
+    "source_url": "https://science.mail.ru/news/58272-ii-kardiotokografiya-mirea/",
+    "channel_message_id": 27,
+    "discussion_message_id": 30,
+    "comment_message_id": 33,
+    "article_url": "https://science.mail.ru/news/58272-ii-kardiotokografiya-mirea/",
+    "image_urls": [
+      "https://resizer.mail.ru/p/43225dd5-639c-5b27-99e4-02fb47332b1a/AQA4jncoo4CqRmgTa95-kaQOEEYPcvJsY4uHDAIhxF0DU4oBqtwkYO7oxIJ1OVTyohWk-JVW54n9C2rxX7-dTFOHD5c.jpg",
+      "https://resizer.mail.ru/p/2dd3a082-d44b-51fb-8d1e-fa396a4ecd31/AQA48jsGJ_THcJ3qHcbhIfdlZPeywaA1fZW47cPrWv3ulVGoH6blonebB7pF5nRIO1EWRtq2s0SFoh_5HnJFPb1xiDo.jpg",
+      "https://resizer.mail.ru/p/55159472-58eb-5fac-b98a-2cbffd5c7917/dpr:200/AQA4MqQ2opWiHFiK2kV_7vPKLtqeLLkyve516ruzm9Mq3gdSVfyIsRTJWgXDiuVzITxOy1c-eyYMoVrOrKHXRLlxtZg.jpg"
+    ],
+    "image_hashes": [
+      "e1ea763b1d37ec845b5bb4ae7adbbcb72dc1d8a2387e70dd09c1ddd0804ecfc2",
+      "8c5cba054bdbef2c80721def5846700f23c0bd812806dc784a7869ff351c113f",
+      "b17bc6e26e7a02c45f9f3e917de92b9b3efe8a3198d8cd0b05fd40831e3615de"
+    ],
+    "image_fingerprints": [
+      "1d336247891b3220",
+      "1b372666ca921621",
+      "3d7363c38c193160",
+      "76cdcd8c142444c2",
+      "ee3919384c880805",
+      "83060c1830e3868c",
+      "0e19193162cc8818",
+      "cccd9ebab2929696",
+      "cdcebe92ba929296",
+      "8ebeb2b292929686",
+      "67e38b8d8ccdad89",
+      "39195a6ae4446c4c",
+      "cc4dcebebaba9292",
+      "cccd9eb2b2929696",
+      "ce8d353131311117",
+      "7f1f37237076729f",
+      "0f0f8d89989acde7",
+      "1f1d9595b0b0f4cc",
+      "3b1e14323034b4ce",
+      "070382c6c7c6e771",
+      "7f396949c1d0e83c",
+      "eff33113a360b0f8"
+    ],
+    "channel_message_ids": [
+      27,
+      28,
+      29
+    ]
   }
 ]
