@@ -453,5 +453,53 @@
     "channel_message_ids": [
       30
     ]
+  },
+  {
+    "topic": "Строительство ЦОДов для ИИ за рубежом",
+    "headline": "Россия прорабатывает размещение ИИ-дата-центров в дружественных странах 🌐",
+    "text": "Правительство обсуждает создание дата-центров для нужд искусственного интеллекта на территории Беларуси и Казахстана. Это решение продиктовано дефицитом вычислительных мощностей и электроэнергии внутри России.\n\nРазмещение объектов за рубежом позволит быстрее наращивать infrastructure для отечественных моделей. Главным challenge остаются законодательные requirement, согласно которым данные пользователей должны храниться на территории РФ, что потребует разработки особого правового режима.",
+    "dictionary": [
+      {
+        "word": "infrastructure",
+        "transcription": "ˈɪnfrəˌstrʌktʃə",
+        "translation": "инфраструктура"
+      },
+      {
+        "word": "challenge",
+        "transcription": "ˈtʃælɪndʒ",
+        "translation": "вызов"
+      },
+      {
+        "word": "requirement",
+        "transcription": "rɪˈkwaɪəmənt",
+        "translation": "требование"
+      }
+    ],
+    "source_url": "https://ru.themoscowtimes.com/2026/10/08/rossiya-nachala-obsuzhdat-razmeschenie-data-tsentrov-dlya-iivdruzhestvennih-stranah-a208103",
+    "channel_message_id": 31,
+    "discussion_message_id": 36,
+    "comment_message_id": 37,
+    "article_url": "https://ru.themoscowtimes.com/2026/10/08/rossiya-nachala-obsuzhdat-razmeschenie-data-tsentrov-dlya-iivdruzhestvennih-stranah-a208103",
+    "image_urls": [
+      "https://ru.themoscowtimes.com/image/og/33/208103__3350499cad888805dfb695efd99a55f3.jpg"
+    ],
+    "image_hashes": [
+      "087747dfd779f9e0a48a58e8064d5c72e71b8095e6f4d30ffd96c39872343964"
+    ],
+    "image_fingerprints": [
+      "00002c9ea66e60e0",
+      "0020951c2b094123",
+      "00204d8e96162008",
+      "004026371b1b8c4c",
+      "004027331b01840c",
+      "000052696a66068e",
+      "00805573ac24068e",
+      "004027131515444e",
+      "008006376b2b8c0c",
+      "000054afb3931838"
+    ],
+    "channel_message_ids": [
+      31
+    ]
   }
 ]
