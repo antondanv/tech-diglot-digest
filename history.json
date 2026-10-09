@@ -501,5 +501,63 @@
     "channel_message_ids": [
       31
     ]
+  },
+  {
+    "topic": "Разработка суверенной системы памяти MMW для ИИ-агентов",
+    "headline": "Программист создал систему памяти для ИИ-агентов в закрытом контуре 🧠",
+    "text": "Российский developer в одиночку создал комплекс MMW, устраняющий потерю context у автономных ИИ-агентов. Новая платформа сохраняет хронологию действий между сессиями и позволяет разворачивать вычисления внутри защищенного периметра без доступа к внешней сети.\n\nАрхитектура решения построена на открытом протоколе и реляционной базе данных, что гарантирует полную isolation корпоративных сведений. Автор уже подал официальную заявку на включение продукта в реестр отечественного софта и готовится к первым пилотным внедрениям.",
+    "dictionary": [
+      {
+        "word": "developer",
+        "transcription": "dɪˈvɛləpər",
+        "translation": "разработчик"
+      },
+      {
+        "word": "context",
+        "transcription": "ˈkɒntɛkst",
+        "translation": "контекст"
+      },
+      {
+        "word": "isolation",
+        "transcription": "ˌaɪsəˈleɪʃn",
+        "translation": "изоляция"
+      }
+    ],
+    "source_url": "https://www.cnews.ru/news/top/2026-10-09_programmist_v_odinochku_brosil",
+    "channel_message_id": 32,
+    "discussion_message_id": 38,
+    "comment_message_id": 40,
+    "article_url": "https://www.cnews.ru/news/top/2026-10-09_programmist_v_odinochku_brosil",
+    "image_urls": [
+      "https://www.cnews.ru/img/design2008/logocnews_f.png",
+      "https://static.cnews.ru/img/news/2024/02/05/it6.jpg"
+    ],
+    "image_hashes": [
+      "0002039292e1271fbe1cdf5e8baed7cfc991346db9ddb4f7d953c1f9b2661dd8",
+      "9db07fdff64c265cfb3baefa3f267f527ec33598f4a1f5da8af73861ea2c2343"
+    ],
+    "image_fingerprints": [
+      "0094766aaa868400",
+      "0062b299cce08000",
+      "0049253692c18000",
+      "0022b2998d830300",
+      "00282914d4202000",
+      "0025d5d848060200",
+      "00d45d6632080800",
+      "00947669ad868200",
+      "0084564a89860600",
+      "00a4c4525aa40400",
+      "0b04a5a7871bcfcb",
+      "0de4e7c6c787db6e",
+      "070de5e6c79fee6f",
+      "e7e7e6c79fcf6e6f",
+      "0503dbdbc3c66737",
+      "070b8ce7e7e6879a",
+      "2f19dade1f373cbe"
+    ],
+    "channel_message_ids": [
+      32,
+      33
+    ]
   }
 ]
