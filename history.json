@@ -559,5 +559,53 @@
       32,
       33
     ]
+  },
+  {
+    "topic": "Запуск нейросети Qwen на плате FPGA через проект openTPU",
+    "headline": "Энтузиаст запустил языковую модель Qwen на плате FPGA за 50 долларов ⚙️",
+    "text": "Инженер собрал бюджетный accelerator для нейросетей, подключив плату FPGA с четырьмя гигабайтами памяти к мини-компьютеру через стандартный интерфейс. На собранном стенде удалось запустить большую языковую модель Qwen на базе открытой архитектуры openTPU без использования видеокарты.\n\nНеобычный experiment показал, что специализированный процессор для вычислений можно протестировать дома на доступных электронных components. Автор продолжит развивать стенд и планирует испытать более мощные микросхемы для ускорения генерации текста.",
+    "dictionary": [
+      {
+        "word": "accelerator",
+        "transcription": "əkˈsɛləreɪtər",
+        "translation": "ускоритель"
+      },
+      {
+        "word": "experiment",
+        "transcription": "ɪkˈspɛrɪmənt",
+        "translation": "эксперимент"
+      },
+      {
+        "word": "components",
+        "transcription": "kəmˈpəʊnənts",
+        "translation": "компоненты"
+      }
+    ],
+    "source_url": "https://habr.com/ru/articles/1092504/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1092504",
+    "channel_message_id": 34,
+    "discussion_message_id": 41,
+    "comment_message_id": 42,
+    "article_url": "https://habr.com/ru/articles/1092504/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1092504",
+    "image_urls": [
+      "https://habr.com/share/publication/1092504/50d76484d7bdf982c92d175e398084fc/"
+    ],
+    "image_hashes": [
+      "6f8cf351b22776be07c7dfee93406c926e2b69fc04bd02ff3b84a3be2a6480ac"
+    ],
+    "image_fingerprints": [
+      "00002925b300c0c0",
+      "09019e9e2c000000",
+      "05052eae4e000000",
+      "42424b2373602060",
+      "80808babd3c04060",
+      "c4c4432377602060",
+      "c0c04b2357c02060",
+      "c4c40343d7c06060",
+      "703012523b304c4c",
+      "6060222a65601030"
+    ],
+    "channel_message_ids": [
+      34
+    ]
   }
 ]
