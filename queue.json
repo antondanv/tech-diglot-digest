@@ -1,1 +1,117 @@
-[]
+[
+  {
+    "headline": "ИИ-агенты начали создавать больше пулл-реквестов на GitHub, чем программисты 💻",
+    "topic": "Рост доли сгенерированного ИИ кода на платформе GitHub",
+    "text": "В августе 2026 года число запросов на слияние от автономных агентов на платформе GitHub впервые превысило показатели людей. Отраслевая statistics показывает, что активность таких ботов выросла почти в девять раз всего за восемь месяцев.\n\nИнженеры крупных технологических компаний теперь запускают параллельные sessions виртуальных исполнителей и отказываются от классических editors. Традиционное программирование постепенно уступает место orchestration нескольких независимых инструментов.",
+    "dictionary": [
+      {
+        "word": "statistics",
+        "transcription": "stəˈtɪstɪks",
+        "translation": "статистика"
+      },
+      {
+        "word": "sessions",
+        "transcription": "ˈseʃənz",
+        "translation": "сессии"
+      },
+      {
+        "word": "editors",
+        "transcription": "ˈedɪtərz",
+        "translation": "редакторы"
+      },
+      {
+        "word": "orchestration",
+        "transcription": "ˌɔːrkɪˈstreɪʃn",
+        "translation": "оркестрация"
+      }
+    ],
+    "source_url": "https://habr.com/ru/articles/1092354/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1092354",
+    "article_url": "https://habr.com/ru/articles/1092354/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1092354",
+    "image_urls": [
+      "https://habrastorage.org/extt/04/d9/bc/04d9bc08de45146ccabf176eb27a4c22.jpg",
+      "https://habrastorage.org/extt/2a/28/95/2a28955c264c67454c36ccc37987e2e8.jpg",
+      "https://habrastorage.org/extt/33/5d/47/335d47919d1073946ce04e4f25298970.jpg"
+    ],
+    "image_hashes": [
+      "848040bdb5b0510e08664fa1fad0ed6c06ec1650aa237d2dd34ee6f8f1cad699",
+      "e595f518611c7d338fb711ed7657800c7d2cd60378e7ddda5ed71834002997b5",
+      "1ad8e68d8d5941b133c54a7aeb7cc69fac408edd3ebb92dc21d5725a7261b1e7"
+    ],
+    "image_fingerprints": [
+      "6767676333b3b363",
+      "676f636733a3a763",
+      "6f6f63673333a7a3",
+      "e7ef6363732323e3",
+      "676f67636733a3a7",
+      "6f63672733a7a367",
+      "cfcfcfc7676767c7",
+      "79713938989cd874",
+      "c7cdc5c3e3736353",
+      "2e36261e8e0e0e5e",
+      "336139c9cd4cc801",
+      "6aeee3f8fc6c7c60",
+      "c9c9ccf0f2d27060",
+      "4ece678797938605",
+      "b33393cbebedc183",
+      "d696d3e3e3ebe2c3",
+      "1c1c9edf5f460c1b",
+      "81506325f07c341c",
+      "17823d58a04026e3",
+      "0ec25919e1e15165",
+      "964418b8c0e08464",
+      "3c08737341c10bcb",
+      "0ec45919e1e14571",
+      "0ec05919e3e14575",
+      "0ec35919e1f14575",
+      "b020e3c303032313",
+      "07c14e5ee0b0013b"
+    ]
+  },
+  {
+    "headline": "В России предложили временно допустить иностранные GPU на объекты КИИ ⚡",
+    "topic": "Предложение разрешить иностранные GPU для критической информационной инфраструктуры",
+    "text": "Рабочая группа при правительственной подкомиссии предложила разрешить использование foreign процессоров на объектах critical информационной инфраструктуры. Послабление затронет вычисления для нейросетей при условии, что профильное ведомство подтвердит отсутствие отечественного аналога.\n\nСейчас закон предписывает применять доверенную технику из реестра, однако performance российских chips пока не хватает для масштабных моделей. Все дополнительные меры защиты при внедрении импортных комплексов предприятиям придётся согласовывать с ФСБ.",
+    "dictionary": [
+      {
+        "word": "foreign",
+        "transcription": "ˈfɔːrən",
+        "translation": "зарубежный"
+      },
+      {
+        "word": "critical",
+        "transcription": "ˈkrɪtɪkl",
+        "translation": "критический"
+      },
+      {
+        "word": "performance",
+        "transcription": "pərˈfɔːrməns",
+        "translation": "производительность"
+      },
+      {
+        "word": "chips",
+        "transcription": "tʃɪps",
+        "translation": "чипы"
+      }
+    ],
+    "source_url": "https://pravo.ru/news/266245/",
+    "article_url": "https://pravo.ru/news/266245/",
+    "image_urls": [
+      "https://storage.pravo.ru/image/311/155935.webp?v=1766158515"
+    ],
+    "image_hashes": [
+      "37c54c110053e6ab29c10e10b001cf0b699ccf26ee8958d34dda59173499e19a"
+    ],
+    "image_fingerprints": [
+      "0000708e8e700000",
+      "0000162129160000",
+      "00003c45412c0000",
+      "0000609797600000",
+      "0000007878000000",
+      "0000b01707b00000",
+      "0000c05c1cc00000",
+      "0000708f86700000",
+      "0000700e06700000",
+      "0000700e0e700000"
+    ]
+  }
+]

@@ -655,5 +655,55 @@
     "channel_message_ids": [
       35
     ]
+  },
+  {
+    "topic": "Открытие военной базы ИИ в Южной Корее",
+    "headline": "Южная Корея открыла первую военную базу для обучения армейских роботов 🤖",
+    "text": "Министерство обороны Южной Кореи запустило в городе Панге исследовательский центр для сухопутных войск. Главная задача новой площадки — подготовка нейросетей, способных управлять autonomous и humanoid mechanisms.\n\nТакие роботы возьмут на себя опасные задачи по demining и доставке грузов, снижая угрозу для личного состава. В будущем военные планируют развернуть ещё четыре аналогичных объекта по всей стране.",
+    "dictionary": [
+      {
+        "word": "autonomous",
+        "transcription": "ɔːˈtɑːnəməs",
+        "translation": "автономный"
+      },
+      {
+        "word": "humanoid",
+        "transcription": "ˈhjuːmənɔɪd",
+        "translation": "гуманоидный"
+      },
+      {
+        "word": "mechanisms",
+        "transcription": "ˈmekənɪzəmz",
+        "translation": "механизмы"
+      },
+      {
+        "word": "demining",
+        "transcription": "diːˈmaɪnɪŋ",
+        "translation": "разминирование"
+      }
+    ],
+    "source_url": "https://voennoedelo.com/posts/id90488-roboty-vmesto-soldat-juzhnaja-koreja-otkryla-voennyj-tsentr-iskusstvennogo-intellekta",
+    "channel_message_id": 36,
+    "discussion_message_id": 45,
+    "comment_message_id": 46,
+    "article_url": "https://voennoedelo.com/posts/id90488-roboty-vmesto-soldat-juzhnaja-koreja-otkryla-voennyj-tsentr-iskusstvennogo-intellekta",
+    "image_urls": [
+      "https://cdn.voennoedelo.com/uploads/prew/big_images/webp_version/6GYqeHEioUlNBO2F8mwH.webp"
+    ],
+    "image_hashes": [
+      "f56805428c976c1fb63a49b32433fe20bee09d5758ee61dcf8e7c5e5347c7027"
+    ],
+    "image_fingerprints": [
+      "df7f6f3f376969bf",
+      "0a18303030a8c889",
+      "9b85858b8606c5cb",
+      "3f1f171f1b1c958f",
+      "4f4f4f4745ccae2f",
+      "0723626323c392b1",
+      "4fcfcfcf848e4f4f"
+    ],
+    "channel_message_ids": [
+      36
+    ]
   }
 ]
