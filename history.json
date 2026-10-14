@@ -834,5 +834,76 @@
     "channel_message_ids": [
       40
     ]
+  },
+  {
+    "topic": "Исследование факторов ранжирования абзацев в ИИ-поиске",
+    "headline": "Как нейросети выбирают абзацы для ответов: исследование Perplexity 🤖",
+    "text": "Analysis 60 ответов Perplexity показал, что нейросети чаще цитируют абзацы длиной от 30 до 80 слов.\n\nКороткие fragment часто игнорируются, так как они не содержат завершенной мысли, а слишком длинные тексты плохо поддаются structure при поиске.",
+    "dictionary": [
+      {
+        "word": "fragment",
+        "transcription": "ˈfræɡmənt",
+        "translation": "фрагмент"
+      },
+      {
+        "word": "structure",
+        "transcription": "ˈstrʌktʃə",
+        "translation": "структурировать"
+      },
+      {
+        "word": "analysis",
+        "transcription": "əˈnæləsɪs",
+        "translation": "анализ"
+      }
+    ],
+    "source_url": "https://habr.com/ru/articles/1094484/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1094484",
+    "channel_message_id": 41,
+    "discussion_message_id": 53,
+    "comment_message_id": 56,
+    "article_url": "https://habr.com/ru/articles/1094484/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1094484",
+    "image_urls": [
+      "https://habr.com/share/publication/1094484/8bbc0fa4aad593cafea05db0fa8f6ed2/",
+      "https://habrastorage.org/extt/00/e2/04/00e2043fb86640ea2c95cd21a35b7484.jpg",
+      "https://habrastorage.org/extt/4f/46/1a/4f461a0a863d160731b58bd1d8bae9c2.png"
+    ],
+    "image_hashes": [
+      "218d8681d74c9edca261fa88450dbb78713e6593f83d64aa18ba5b8e277e059c",
+      "596ff698b2603a34a391dfc8e52c398e7c4fcb5b58bcfe0b5986aad8f878fef3",
+      "520c887afdeab16673d1018c44512f31b4ac525c5ebef29dd9ea164393085806"
+    ],
+    "image_fingerprints": [
+      "0000b1292d27c0c0",
+      "09011e9ed8580000",
+      "050146ee8c0c8080",
+      "8080513bab036060",
+      "c0c033134746e0e0",
+      "c4c43337a6a6e0e0",
+      "70300a2a32224c6c",
+      "42402b5b47573070",
+      "c4c4335746467070",
+      "6060144e6b695858",
+      "062c2c1cb37c2e83",
+      "0d1dbd1d96382c46",
+      "8b9a1b8b55391da4",
+      "127272336bf35b8c",
+      "e5e287923227968a",
+      "c2ce0e866d1e8b91",
+      "e664e66613c37530",
+      "d595c1c0e38c0000",
+      "a3a386c0c49b0006",
+      "7272c50581200068",
+      "2a2a0c081066000c",
+      "1959320121d00010",
+      "acac08001024000c",
+      "cccc888091a0000c",
+      "cccc888095a0008c",
+      "cccc888091a0008c",
+      "cc4c888091a0000c"
+    ],
+    "channel_message_ids": [
+      41,
+      42,
+      43
+    ]
   }
 ]
