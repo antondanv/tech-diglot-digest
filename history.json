@@ -905,5 +905,79 @@
       42,
       43
     ]
+  },
+  {
+    "topic": "Разработка инструмента для восстановления данных Яндекс.Диска",
+    "headline": "Энтузиаст выпустил утилиту для спасения фото с поврежденного Яндекс.Диска 💾",
+    "text": "После сбоев в дата-центрах Яндекса часть файлов стала недоступна для скачивания через штатный interface.\n\nРазработчик создал program, которая позволяет выгрузить снимки, пока они остаются available на серверах компании.",
+    "dictionary": [
+      {
+        "word": "interface",
+        "transcription": "ˈɪntəfeɪs",
+        "translation": "интерфейс"
+      },
+      {
+        "word": "program",
+        "transcription": "ˈprəʊɡræm",
+        "translation": "программа"
+      },
+      {
+        "word": "available",
+        "transcription": "əˈveɪləbl",
+        "translation": "доступный"
+      }
+    ],
+    "source_url": "https://habr.com/ru/articles/1093988/",
+    "channel_message_id": 44,
+    "discussion_message_id": 57,
+    "comment_message_id": 60,
+    "article_url": "https://habr.com/ru/articles/1093988/",
+    "image_urls": [
+      "https://habr.com/share/publication/1093988/391da584cea7946269c3801470411e48/",
+      "https://habrastorage.org/extt/1f/bb/5f/1fbb5fb88b8844b356bdf3054a9f3895.png",
+      "https://habrastorage.org/extt/c2/f2/b1/c2f2b19174f5f92f0fe6f73d039c88b8.png"
+    ],
+    "image_hashes": [
+      "850e0271bfb88386411e385a9aa63a341ebc0de76a19952e64f92b609b6466aa",
+      "34c6e16257101c8d71e3e52b3fae996b3246dd2a5f9e2057365d90905c124643",
+      "dd0a79769ef7187bb403158bc745da53ca6d0adbef476ecca76b11ee63720ad9"
+    ],
+    "image_fingerprints": [
+      "09011e1666608000",
+      "0501868fdf986060",
+      "7030064777252b2b",
+      "c0c033331f2c1818",
+      "000061615646b8b8",
+      "606008484d490616",
+      "4242131357561818",
+      "80802323b7261858",
+      "c4c42323afac1038",
+      "c4c413334f6c1818",
+      "f163737a3b751579",
+      "f111637778e07a5a",
+      "7b6e6c661e1f2321",
+      "6c6e661e9a230b21",
+      "737b7b716e6e1f23",
+      "76731e9b250b2561",
+      "5b7875617a4e6c66",
+      "741545497a724e6c",
+      "707515597a666c6e",
+      "f1617374735b2c71",
+      "92981c30181e181c",
+      "1a1c301d184f0f0b",
+      "8d8e9c8e8da7a7a7",
+      "181c381c180e0e0e",
+      "1c301c181e0e0e0e",
+      "1c30181e181e0e0e",
+      "181d180e0e0e0e0e",
+      "9a1c301d180e0e0e",
+      "9a1838181c1e0e0e",
+      "3418703830161616"
+    ],
+    "channel_message_ids": [
+      44,
+      45,
+      46
+    ]
   }
 ]
