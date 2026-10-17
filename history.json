@@ -1118,5 +1118,53 @@
       51,
       52
     ]
+  },
+  {
+    "topic": "Планы блокировки VPN с помощью технологий ИИ",
+    "headline": "Власти задумали повысить блокировку VPN с помощью нейросетей 🛡️",
+    "text": "Минцифры предложило довести effectiveness выявления нежелательных сервисов до 95 процентов с привлечением алгоритмов машинного обучения. Мера также вошла в проект национального плана по развитию ИИ до 2030 года, где целевой target составляет 70 процентов.\n\nТехнология призвана быстро распознавать поведение сетевых узлов и хостингов, однако отраслевые специалисты предупреждают о риске ошибочного перекрытия легитимных корпоративных и голосовых каналов. Повысить надёжность filtering предлагают за счёт ручной проверки каждого подозрительного адреса.",
+    "dictionary": [
+      {
+        "word": "effectiveness",
+        "transcription": "ɪˈfektɪvnəs",
+        "translation": "результативность"
+      },
+      {
+        "word": "target",
+        "transcription": "ˈtɑːɡɪt",
+        "translation": "целевой ориентир"
+      },
+      {
+        "word": "filtering",
+        "transcription": "ˈfɪltərɪŋ",
+        "translation": "фильтрация"
+      }
+    ],
+    "source_url": "https://ru.themoscowtimes.com/2026/10/16/vlasti-zadumali-massovo-blokirovat-vpn-u-rossiyan-s-pomoschyu-iskusstvennogo-intellekta-a208781",
+    "channel_message_id": 53,
+    "discussion_message_id": 69,
+    "comment_message_id": 70,
+    "article_url": "https://ru.themoscowtimes.com/2026/10/16/vlasti-zadumali-massovo-blokirovat-vpn-u-rossiyan-s-pomoschyu-iskusstvennogo-intellekta-a208781",
+    "image_urls": [
+      "https://ru.themoscowtimes.com/image/og/be/208781__bec4af3edb6407a8561ad701fbd3a4eb.jpg"
+    ],
+    "image_hashes": [
+      "45f1fcd3fdcab6c9af5b31a6a7a4698d8511d68af7ee0b4aa6e6be6a2a99c57f"
+    ],
+    "image_fingerprints": [
+      "c546642c3e0e5d1b",
+      "a2661b1b1b0d0d1d",
+      "63e5a5bd3d8e8a9e",
+      "a2665b1b1b0d0c1e",
+      "58392b2f0f232227",
+      "2414961313111511",
+      "5c6d4fcfefe3d1b1",
+      "b235151d1d0c0e0e",
+      "8494d7f7f7392979",
+      "226a2b3b3b1d1d1d"
+    ],
+    "channel_message_ids": [
+      53
+    ]
   }
 ]
