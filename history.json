@@ -1050,5 +1050,73 @@
       48,
       49
     ]
+  },
+  {
+    "topic": "Открытие экзопланеты у белого карлика HS 0209+0832",
+    "headline": "Астрономы нашли экзопланету второго поколения у белого карлика 🔭",
+    "text": "Учёные открыли редкую планету размером с Юпитер, вращающуюся вокруг белого карлика HS 0209+0832 в 270 световых годах от Земли. Небесное тело сформировалось из вещества, сброшенного звездой во время предсмертной агонии на стадии красного гиганта.\n\nСпектральные данные телескопа Хаббл выявили цинк, медь и ниобий, которые падают обратно на остывающий звёздный remnant. Звёздный ветер постепенно destruction atmosphere новорождённого объекта, совершающего полный оборот за 4,4 суток.",
+    "dictionary": [
+      {
+        "word": "atmosphere",
+        "transcription": "ˈætməsfɪər",
+        "translation": "атмосфера"
+      },
+      {
+        "word": "remnant",
+        "transcription": "ˈremnənt",
+        "translation": "остаток"
+      },
+      {
+        "word": "destruction",
+        "transcription": "dɪˈstrʌkʃn",
+        "translation": "разрушение"
+      }
+    ],
+    "source_url": "https://habr.com/ru/articles/1095480/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1095480",
+    "channel_message_id": 50,
+    "discussion_message_id": 65,
+    "comment_message_id": 68,
+    "article_url": "https://habr.com/ru/articles/1095480/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1095480",
+    "image_urls": [
+      "https://habr.com/share/publication/1095480/e53b90854795d5a6c6a1c39287abc744/",
+      "https://habrastorage.org/extt/99/a0/6b/99a06bc6a16af6e78a601370ac92f55d.webp",
+      "https://habrastorage.org/extt/fd/ec/84/fdec842626818e36b64bc12dc6a997f3.webp"
+    ],
+    "image_hashes": [
+      "0d6dfcae5193949bd28c8a2ee205ecfdddcf115775f0fbf99e095b11ff79716a",
+      "8fa936a604a374bee65c2717d51cbab82aa00ac5de212dab892f431d74125f1a",
+      "e09a6dcdabf0489c32cb74a26c8bf860d4126065ca9322e4fecf6c315694b750"
+    ],
+    "image_fingerprints": [
+      "000085e6af1c0000",
+      "0901cc4ff3c80000",
+      "0501269731340000",
+      "7030084e5a196060",
+      "6060125963676060",
+      "808049654c8d8080",
+      "c4c02f675d5cc0c0",
+      "42402b636c4dc040",
+      "c0c02b235d5cc0c0",
+      "c4c0466f5d5cc0c0",
+      "3c330f3f7fbf3f3f",
+      "6c583074f4f77b7f",
+      "7b661c3979fd7c7f",
+      "d831e1cccdede7fe",
+      "e79c79f3f2fbf9fe",
+      "e6dc30f6f6f2f9ff",
+      "30e191b1b19bcff6",
+      "83878793e7e7e3e7",
+      "c8e8e86ce8e8f868",
+      "0c0c0c441d1f0f0f",
+      "47474f47cf8f87cf",
+      "232323ab33333333",
+      "6969692969797179",
+      "101010d23c3c1c1c"
+    ],
+    "channel_message_ids": [
+      50,
+      51,
+      52
+    ]
   }
 ]
