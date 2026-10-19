@@ -1426,5 +1426,66 @@
       61,
       62
     ]
+  },
+  {
+    "topic": "Интеграция движка JetBrains в ИИ-агенты Netflix",
+    "headline": "Netflix ускорила работу ИИ-агентов с помощью движка JetBrains ⚡",
+    "text": "Инженеры компании Netflix подключили кодовых агентов к движку от JetBrains, работающему без графического интерфейса. Новая связка помогла языковым моделям разбирать зависимости в коде без утомительной ручной распаковки архивов.\n\nСозданный разработчиками benchmark подтвердил заметную выгоду: в задачах навигации общий consumption времени сократился, а экономия вычислительных ресурсов достигала шестидесяти процентов. Позже компания рассчитывает внедрить аналогичный index в среду разработки на Python и Go.",
+    "dictionary": [
+      {
+        "word": "benchmark",
+        "transcription": "ˈbentʃmɑːrk",
+        "translation": "сравнительный тест"
+      },
+      {
+        "word": "consumption",
+        "transcription": "kənˈsʌmpʃn",
+        "translation": "расход"
+      },
+      {
+        "word": "index",
+        "transcription": "ˈɪndeks",
+        "translation": "индекс"
+      }
+    ],
+    "source_url": "https://habr.com/ru/companies/spring_aio/articles/1096226/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1096226",
+    "channel_message_id": 63,
+    "discussion_message_id": 84,
+    "comment_message_id": 86,
+    "article_url": "https://habr.com/ru/companies/spring_aio/articles/1096226/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1096226",
+    "image_urls": [
+      "https://habr.com/share/publication/1096226/683f52d77e82b205b781a3a953ef4fff/",
+      "https://habrastorage.org/r/w1560/getpro/habr/upload_files/258/484/92d/25848492d4cd2dcd1df595e475569a9a.png"
+    ],
+    "image_hashes": [
+      "22369c7f5692930b411815110513472d09b1dc1430c64c116960c322e8d8531a",
+      "f9f4ea2e3b7522adad20983e853d8153dcff07b67fa3194bd700469e520dc883"
+    ],
+    "image_fingerprints": [
+      "000092929c9c0000",
+      "09012e0cdcc00000",
+      "050166467e700000",
+      "6060445457576060",
+      "808011535f5c8080",
+      "42401b536f4c4040",
+      "c4c413575f5c4040",
+      "c0c013135f1cc0c0",
+      "c4c41717de98c0c0",
+      "7030292969653070",
+      "1f776c8e954d4d20",
+      "3ff6aa55528a8220",
+      "00e6e6e3e3c2c662",
+      "f7e7261ffefdff7f",
+      "fbf3c2a7fe3f3f3f",
+      "00c9cdcccdc9c848",
+      "0071d1f0f0e06130",
+      "1fbf3d4e940e0f91",
+      "1f1f5eac330f4713",
+      "fff971737f9f9f0f"
+    ],
+    "channel_message_ids": [
+      63,
+      64
+    ]
   }
 ]
