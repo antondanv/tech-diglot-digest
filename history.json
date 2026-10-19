@@ -1487,5 +1487,53 @@
       63,
       64
     ]
+  },
+  {
+    "topic": "Тестирование сканеров уязвимостей в ИИ-скиллах",
+    "headline": "Сканеры безопасности пропустили скрытую атаку в скиллах для ИИ 🔍",
+    "text": "Энтузиаст протестировал утилиты от Cisco и NVIDIA для поиска скрытых threats в расширениях для цифровых помощников. Для проверки автор собрал synthetic набор инструкций и запустил утилиты в изолированном контейнере без доступа к глобальной паутине.\n\nИтоги выявили серьезные слепые зоны защитного софта: опасное delegation прав через субагента пропустили все три продукта. При этом защитные комплексы подняли ложную тревогу, заметив цитирование вредоносного образца в учебной справке.",
+    "dictionary": [
+      {
+        "word": "threats",
+        "transcription": "θrets",
+        "translation": "угроз"
+      },
+      {
+        "word": "synthetic",
+        "transcription": "sɪnˈθetɪk",
+        "translation": "синтетический"
+      },
+      {
+        "word": "delegation",
+        "transcription": "ˌdelɪˈɡeɪʃn",
+        "translation": "делегирование"
+      }
+    ],
+    "source_url": "https://habr.com/ru/articles/1094856/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1094856",
+    "channel_message_id": 65,
+    "discussion_message_id": 87,
+    "comment_message_id": 88,
+    "article_url": "https://habr.com/ru/articles/1094856/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1094856",
+    "image_urls": [
+      "https://habrastorage.org/extt/16/cf/11/16cf11167f4bb2108dc1af69c279df17.png"
+    ],
+    "image_hashes": [
+      "14556d5c18550bdbe2f5f6fb25ee50153a76f797e89fdbb985d6c9ab885100cf"
+    ],
+    "image_fingerprints": [
+      "40131a1232082000",
+      "8124343575114000",
+      "81929a923289a080",
+      "a0898d8989849080",
+      "80929a9212a191a0",
+      "c19a92923289a0a0",
+      "a09a9212b091a080",
+      "84e19a9a929232a1",
+      "9a9a929212c199a0",
+      "929212a199a0a080"
+    ],
+    "channel_message_ids": [
+      65
+    ]
   }
 ]
