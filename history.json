@@ -1606,5 +1606,79 @@
       67,
       68
     ]
+  },
+  {
+    "topic": "Предупреждение МВФ о рисках спада на рынке ИИ",
+    "headline": "В МВФ предупредили об опасности внезапного спада на рынке ИИ 📉",
+    "text": "Представитель Международного валютного фонда Атанасиос Вамвакидис предупредил о возможном потрясении мировой экономики. Поводом для беспокойства может стать внезапное disappointment investors в отдаче от генеративных моделей.\n\nФинансист отметил опасную концентрацию капитала в узкой группе giants и раздутую стоимость активов. Резкий отток вложений грозит снижением биржевых котировок и ощутимым ударом по темпам роста американского ВВП.",
+    "dictionary": [
+      {
+        "word": "disappointment",
+        "transcription": "ˌdɪsəˈpɔɪntmənt",
+        "translation": "разочарование"
+      },
+      {
+        "word": "investors",
+        "transcription": "ɪnˈvɛstərz",
+        "translation": "инвесторы"
+      },
+      {
+        "word": "giants",
+        "transcription": "ˈdʒaɪənts",
+        "translation": "гиганты"
+      }
+    ],
+    "source_url": "https://3dnews.ru/1150105/krizis-doveriya-k-ii",
+    "channel_message_id": 69,
+    "discussion_message_id": 93,
+    "comment_message_id": 96,
+    "article_url": "https://3dnews.ru/1150105/krizis-doveriya-k-ii",
+    "image_urls": [
+      "https://cdn.3dnews.ru/assets/external/illustrations/2026/10/18/1150105/sm.anti-01.800.jpeg",
+      "https://cdn.3dnews.ru/assets/external/illustrations/2026/10/18/1150105/sm.anti-02.800.jpg",
+      "https://cdn.3dnews.ru/assets/external/illustrations/2026/10/18/1150105/sm.anti-03.800.jpeg"
+    ],
+    "image_hashes": [
+      "793f5acb23e72fe2c9f14c0c5c77942ff1656e172f2ca8239bf10e9b19462503",
+      "d574ac470b538aabc9b0016c9d3fe3a113bc5d248824188cd4c0d0df822a2d93",
+      "4b2ca15118166d9035cad2344d55a7700eb862410b0fc0b44d3807e0333a1227"
+    ],
+    "image_fingerprints": [
+      "860c0cf8f888a824",
+      "06044c7cf8c8c8c8",
+      "801606040c7cf8c8",
+      "4c7cf8c8c8f0b690",
+      "8206044cfcf8c8d0",
+      "42060674f0c8f012",
+      "1606047cf8c8d0b6",
+      "06047cf8c8c8f094",
+      "a183823efcc4d093",
+      "8206047cf8c8d096",
+      "0030cc5472c2c282",
+      "280c1b6b6a9993a2",
+      "00c8f4b2bab22222",
+      "2030387ae423aac8",
+      "203038a9e7212909",
+      "40715e644b44cc09",
+      "00323d7556b5accc",
+      "a0727cedaf6c4c08",
+      "160706363246ccb0",
+      "00647aeaac6a5a98",
+      "30464ec6cece1100",
+      "10642d6c6cec1101",
+      "00a328abab6b1303",
+      "84d90bd9d93b0400",
+      "a54642c6ce3ea100",
+      "0092123636364606",
+      "10b524b5b5750901",
+      "00a129a9296b1303",
+      "206a486a6aea1202",
+      "004642cecece1e0e"
+    ],
+    "channel_message_ids": [
+      69,
+      70,
+      71
+    ]
   }
 ]
