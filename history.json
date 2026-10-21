@@ -1680,5 +1680,77 @@
       70,
       71
     ]
+  },
+  {
+    "topic": "Создание утилиты blueprint4llm для визуализации планов ИИ",
+    "headline": "Разработчик научил ИИ-агентов рисовать диаграммы интерфейсов 📐",
+    "text": "Программист Евгений Игумнов создал инструмент blueprint4llm, который заставляет кодинг-агентов иллюстрировать планы разработки. Вместо сплошного текста нейросети теперь генерируют понятные блок-схемы и sketches экранов.\n\nУтилита преобразует разметку на базе форматов WireMark и Mermaid в файлы HTML или PDF. Автор также добавил режим preview в браузере, позволяющий видеть изменения layouts прямо во время написания инструкций.",
+    "dictionary": [
+      {
+        "word": "sketches",
+        "transcription": "ˈskɛtʃɪz",
+        "translation": "наброски"
+      },
+      {
+        "word": "preview",
+        "transcription": "ˈpriːvjuː",
+        "translation": "предпросмотр"
+      },
+      {
+        "word": "layouts",
+        "transcription": "ˈleɪaʊts",
+        "translation": "макеты"
+      }
+    ],
+    "source_url": "https://habr.com/ru/articles/1096958/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1096958",
+    "channel_message_id": 72,
+    "discussion_message_id": 97,
+    "comment_message_id": 100,
+    "article_url": "https://habr.com/ru/articles/1096958/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1096958",
+    "image_urls": [
+      "https://habr.com/share/publication/1096958/7aae8ddc1100b90d841cda896c34e025/",
+      "https://habrastorage.org/extt/fb/c7/3f/fbc73f47410f6ba9c9668d19b02a4e35.png",
+      "https://habrastorage.org/extt/ea/ab/48/eaab48bcfb832413c2b9ee61773aa64f.png"
+    ],
+    "image_hashes": [
+      "80d8c65f152f845d5b65cc14ce858c791c8a67eb0675920d934e480666129e61",
+      "49f419ec3ea0dabfd7200021bd4cddb16db76c25ecb0a5333de042809c0928a4",
+      "4d0e9602cdbe058de89d3713467e18c09f4f8b26fe508850b2c5f04af4b0c6df"
+    ],
+    "image_fingerprints": [
+      "00004c4dc1c00000",
+      "0909c2d616000000",
+      "0505b0b787800000",
+      "60600f2778786060",
+      "80802c8ce0e08080",
+      "42420c4d7370c040",
+      "c4c41c5f6360c040",
+      "c0c01c5f6360c0c0",
+      "c4c4181b636080c0",
+      "702014150c4c3070",
+      "c925a783280e579b",
+      "31fee8d818dec363",
+      "647fccdd189fc3c2",
+      "337c687898dc62e6",
+      "9239393859682564",
+      "3ad91301058565a9",
+      "861f0f8f539b282c",
+      "d4135194b65b49ac",
+      "f423634d4b1b9bd1",
+      "8ee56161c1641319",
+      "0101010101010101",
+      "08c5078e83810101",
+      "0101010101010121",
+      "81c7968381010101",
+      "8783010101010121",
+      "9881c70786838381",
+      "01010101010101b0",
+      "0101010101010131"
+    ],
+    "channel_message_ids": [
+      72,
+      73,
+      74
+    ]
   }
 ]
