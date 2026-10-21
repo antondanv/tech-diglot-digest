@@ -1752,5 +1752,53 @@
       73,
       74
     ]
+  },
+  {
+    "topic": "Открытие симбиотической системы J1633 учеными ИКИ РАН",
+    "headline": "Российские астрофизики нашли редкую двойную звезду с помощью ИИ 🔭",
+    "text": "Астрономы Института космических исследований РАН обнаружили новую симбиотическую рентгеновскую систему в рукаве Наугольника. Найти редкий космический объект с обозначением J1633 ученым помогли специализированные модели машинного обучения.\n\nАнализ данных космического телескопа XMM-Newton выявил устойчивые pulsations radiation с периодом около тридцати минут. Наблюдения подтвердили, что в звездную систему входит красный гигант, подпитывающий компактного companion.",
+    "dictionary": [
+      {
+        "word": "pulsations",
+        "transcription": "pʌlˈseɪʃnz",
+        "translation": "пульсации"
+      },
+      {
+        "word": "radiation",
+        "transcription": "ˌreɪdiˈeɪʃn",
+        "translation": "излучение"
+      },
+      {
+        "word": "companion",
+        "transcription": "kəmˈpænjən",
+        "translation": "компаньон"
+      }
+    ],
+    "source_url": "https://www.interfax.ru/russia/1123694",
+    "channel_message_id": 75,
+    "discussion_message_id": 101,
+    "comment_message_id": 102,
+    "article_url": "https://www.interfax.ru/russia/1123694",
+    "image_urls": [
+      "https://www.interfax.ru/aspimg/1123694.jpg"
+    ],
+    "image_hashes": [
+      "964e43f2d5034f96c5c36c96611f6654948f57a21332070625b7d683274a5a7b"
+    ],
+    "image_fingerprints": [
+      "0020d0c4ec2772a0",
+      "000040889896c688",
+      "000032741db42c2c",
+      "0000b4319b918c8d",
+      "808060725a535d4c",
+      "e020317359351909",
+      "80c058594b494d2c",
+      "0000b03296b39b58",
+      "c040666e67242313",
+      "0080e4b2db535d5c"
+    ],
+    "channel_message_ids": [
+      75
+    ]
   }
 ]
