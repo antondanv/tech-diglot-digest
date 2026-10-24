@@ -1906,5 +1906,79 @@
       77,
       78
     ]
+  },
+  {
+    "topic": "Эксперимент с квантовыми вычислениями на IBM Quantum",
+    "headline": "Квантовые котята: как физики проверяют работу процессоров IBM 🐱",
+    "text": "Энтузиаст решил проверить квантовую superposition, запустив мысленный эксперимент Шрёдингера на реальном процессоре IBM. В качестве кубитов выступили виртуальные кот и кошка, а целью было рождение квантового котенка, что возможно только при одновременной жизни обоих родителей.\n\nНесмотря на высокий уровень шума в системе, эксперимент позволил наглядно увидеть, как именно возникают ошибки в сложных computation. Полученные результаты наглядно показывают, почему квантовые компьютеры все еще требуют refinement для идеальных расчетов.",
+    "dictionary": [
+      {
+        "word": "superposition",
+        "transcription": "ˌsuːpəpəˈzɪʃən",
+        "translation": "суперпозиция"
+      },
+      {
+        "word": "computation",
+        "transcription": "ˌkɒmpjʊˈteɪʃən",
+        "translation": "вычисления"
+      },
+      {
+        "word": "refinement",
+        "transcription": "rɪˈfaɪnmənt",
+        "translation": "доработка"
+      }
+    ],
+    "source_url": "https://habr.com/ru/articles/1098858/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1098858",
+    "channel_message_id": 79,
+    "discussion_message_id": 108,
+    "comment_message_id": 111,
+    "article_url": "https://habr.com/ru/articles/1098858/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1098858",
+    "image_urls": [
+      "https://habrastorage.org/extt/ae/75/7f/ae757f5ab04681d0d915bd10084cb1ac.png",
+      "https://habrastorage.org/extt/a6/28/d2/a628d2f4dcdb331b4466093bc1aa7f23.png",
+      "https://habrastorage.org/extt/0f/2a/22/0f2a2286ef3fefd9e3f69de843c9749b.jpg"
+    ],
+    "image_hashes": [
+      "2095a2a393c1e6b0f9c677594d65ebb128d525c300ad29b87f992861d90f26fb",
+      "9fa45834bbaef270e05d8d57daad576b684d9f2f40a79614961d3726502ef224",
+      "515f2b863165646516e907030aa0761eaf4959e8fceee1c3e7f2f35569eb9846"
+    ],
+    "image_fingerprints": [
+      "3420e4e4d8f1cce0",
+      "9880b0b040444000",
+      "94b0e4e4f8e0e8e0",
+      "a260e6a6d8d884e0",
+      "ac60e8e8d0d2d8c0",
+      "b0b0e4e4f8f2e8e0",
+      "94b0e4e4e0f0e8e8",
+      "92b0f27268786470",
+      "b0e4e4e0f0e8e8f0",
+      "849cec3d3a3a3278",
+      "9613ccc4e4f8f000",
+      "a824c2c2c8f0e000",
+      "909c262632c29202",
+      "d4966961e4f0f120",
+      "36c69999b83ef6c8",
+      "54d4aaa2e06070f0",
+      "6adbb4b4f078f890",
+      "d096aae0e060f090",
+      "5496aae0e070f098",
+      "d4aaa2e06070f098",
+      "1d1f0e2b17343222",
+      "94323232222a2e3f",
+      "ae2f339636323222",
+      "0f2e7b163632222a",
+      "1d0e2f163622222e",
+      "2e33943232222a2e",
+      "22322222222a3e2f",
+      "2e73139434323232",
+      "4d1d0f1f2e2e7f73",
+      "4d1f0fae2e739634"
+    ],
+    "channel_message_ids": [
+      79,
+      80,
+      81
+    ]
   }
 ]
