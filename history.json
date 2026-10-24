@@ -1800,5 +1800,50 @@
     "channel_message_ids": [
       75
     ]
+  },
+  {
+    "topic": "Цифровизация судебной системы РФ",
+    "headline": "Суды России начнут использовать нейросети для обработки дел ⚖️",
+    "text": "Российские суды всех уровней в ближайшем будущем получат доступ к специализированным сервисам на базе искусственного интеллекта. Председатель Верховного суда Игорь Краснов сообщил, что поэтапное implementation технологий уже заложено в календарный план цифровизации.\n\nПри этом использование алгоритмов будет подчинено строгим regulations, а accountability за итоговое решение всегда остается за судьей. Каждое действие системы должно быть проверяемым, чтобы исключить любые ошибки в судебной практике.",
+    "dictionary": [
+      {
+        "word": "regulations",
+        "transcription": "ˌrɛɡjʊˈleɪʃənz",
+        "translation": "регламенты"
+      },
+      {
+        "word": "implementation",
+        "transcription": "ˌɪmplɪmɛnˈteɪʃən",
+        "translation": "внедрение"
+      },
+      {
+        "word": "accountability",
+        "transcription": "əˌkaʊntəˈbɪlɪti",
+        "translation": "ответственность"
+      }
+    ],
+    "source_url": "https://vfokuse.mail.ru/articles/69648873-vse-sudyi-rf-vskore-poluchat-dostup-k-ii-servisam-kak-budet-rabotat-eta-tehnologiya/",
+    "channel_message_id": 76,
+    "discussion_message_id": 103,
+    "comment_message_id": 104,
+    "article_url": "https://vfokuse.mail.ru/articles/69648873-vse-sudyi-rf-vskore-poluchat-dostup-k-ii-servisam-kak-budet-rabotat-eta-tehnologiya/",
+    "image_urls": [
+      "https://resizer.mail.ru/p/1baa4560-26d4-562b-b245-92b8a9006351/AQA1VM_MG_H0GlF9OkGUef7I5b_A021eZMCho3eqxKhLRx9VI3pPWSwGYNPcX-byhuAnX52zW3S8sKaVOUAwOuxGRrY.jpg"
+    ],
+    "image_hashes": [
+      "37f7abfa095ae44cd38d0dd2ab4e0169e1e40c548fdee6cfecd017d011efe2fb"
+    ],
+    "image_fingerprints": [
+      "010101090d7de5ed",
+      "0c0c0c4e68e82c6e",
+      "03030b3736f2db11",
+      "00000002032f79f2",
+      "0607063736f6da93",
+      "060604161474ced6",
+      "383c383c34b0b81c"
+    ],
+    "channel_message_ids": [
+      76
+    ]
   }
 ]
