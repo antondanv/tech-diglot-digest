@@ -1980,5 +1980,50 @@
       80,
       81
     ]
+  },
+  {
+    "topic": "Кризис неооблачных провайдеров",
+    "headline": "Илон Маск предсказал вымирание неооблачных компаний из-за ИИ 📉",
+    "text": "Илон Маск заявил, что более 200 неооблачных компаний ждет consolidation и исчезновение. По его словам, долговые рынки неохотно кредитуют бизнес, чья revenue целиком зависит от дата-центров для нейросетей.\n\nНа фоне этих слов акции провайдеров Nebius, CoreWeave и Iren просели более чем на 4%. Маск подчеркнул, что сама SpaceX не планирует такие acquisitions, так как развивает собственные вычислительные мощности.",
+    "dictionary": [
+      {
+        "word": "consolidation",
+        "transcription": "kənˌsɒlɪˈdeɪʃn",
+        "translation": "консолидация"
+      },
+      {
+        "word": "revenue",
+        "transcription": "ˈrevənjuː",
+        "translation": "выручка"
+      },
+      {
+        "word": "acquisitions",
+        "transcription": "ˌækwɪˈzɪʃnz",
+        "translation": "поглощения"
+      }
+    ],
+    "source_url": "https://finance.mail.ru/article/mask-rasskazal-kakie-vymirayushie-tehnologii-ne-budet-pokupat-69234347/",
+    "channel_message_id": 82,
+    "discussion_message_id": 112,
+    "comment_message_id": 113,
+    "article_url": "https://finance.mail.ru/article/mask-rasskazal-kakie-vymirayushie-tehnologii-ne-budet-pokupat-69234347/",
+    "image_urls": [
+      "https://resizer.mail.ru/p/607ac1c7-c293-5a9e-aad2-d44d6fe30de9/AQAzCewGAwhGkKxFRD3byTMIrqDRonMR_vV16fvzCurNFIzdZb0rSSeYMszNN7qS2guOQRK9xPmjSyqY_qCBpsQgKP0.jpg"
+    ],
+    "image_hashes": [
+      "37d8aa3c2fa6781dcd3d657bfdd0bbba84383c43be9c0d9be0e12e7c7739d434"
+    ],
+    "image_fingerprints": [
+      "cccdec2e2e242421",
+      "cccc4c4f6d666262",
+      "0e86c6c6cea6c3ca",
+      "11199a9a9a988d8b",
+      "b0d858590c08088c",
+      "616376b474301913",
+      "e3f3f33313131111"
+    ],
+    "channel_message_ids": [
+      82
+    ]
   }
 ]
