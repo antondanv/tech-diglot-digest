@@ -2025,5 +2025,53 @@
     "channel_message_ids": [
       82
     ]
+  },
+  {
+    "topic": "Крах ИИ-рынка в Китае",
+    "headline": "ИИ-пузырь в Китае лопнул: индекс STAR50 обвалился на 40% 🇨🇳",
+    "text": "Агентство Reuters сообщило о крахе ИИ-пузыря в Китае. За четыре месяца индекс STAR50 потерял почти 500 млрд долларов capitalization, так как инвестиции в сектор слишком опережали реальную profitability компаний.\n\nИнвесторы начали массово выходить из assets, осознав отсутствие обещанного стократного роста прибыли. Эксперты отмечают, что теперь финансирование будут получать только обоснованные проекты, а не спекулятивные идеи.",
+    "dictionary": [
+      {
+        "word": "capitalization",
+        "transcription": "ˌkæpɪtəlaɪˈzeɪʃn",
+        "translation": "капитализация"
+      },
+      {
+        "word": "profitability",
+        "transcription": "ˌprɒfɪtəˈbɪləti",
+        "translation": "доходность"
+      },
+      {
+        "word": "assets",
+        "transcription": "ˈæsets",
+        "translation": "активы"
+      }
+    ],
+    "source_url": "https://www.bfm.ru/news/622010",
+    "channel_message_id": 83,
+    "discussion_message_id": 114,
+    "comment_message_id": 115,
+    "article_url": "https://www.bfm.ru/news/622010",
+    "image_urls": [
+      "https://cdn.bfm.ru/news/photopreviewextralarge/2026/10/26/lori-0052603631-bigwww.jpg"
+    ],
+    "image_hashes": [
+      "26a70b24af4bb4a2f0ac7d11682c9388586190172f5b09bca8ec4586dc90bf68"
+    ],
+    "image_fingerprints": [
+      "133394c6260751c7",
+      "c199a23242431123",
+      "f031e4cec8884246",
+      "e14ddc92aba3a3c9",
+      "4cd492aba341d9b1",
+      "c88c323868621830",
+      "e14dd293a3a3d991",
+      "69cdd293a3a34199",
+      "e1cc95b1212398b1",
+      "e064dad99191cc98"
+    ],
+    "channel_message_ids": [
+      83
+    ]
   }
 ]
