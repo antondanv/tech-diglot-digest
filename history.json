@@ -2132,5 +2132,70 @@
       84,
       85
     ]
+  },
+  {
+    "topic": "Отношение россиян к платным ИИ-продуктам",
+    "headline": "Россияне не готовы платить за образовательные продукты на базе ИИ 🎓",
+    "text": "Большая portion граждан не видят пользы в платном ИИ-образовании. Исследование показало, что 79% опрошенных отказываются отдавать деньги за курсы или учебники, если они были преимущественно созданы нейросетями.\n\nПользователи предпочитают сохранять контроль над sequence обучения. Они охотнее используют технологии для ускорения рутины, но не доверяют алгоритмам создание фундаментальных foundations для своей профессии.",
+    "dictionary": [
+      {
+        "word": "portion",
+        "transcription": "ˈpɔːʃn",
+        "translation": "часть"
+      },
+      {
+        "word": "sequence",
+        "transcription": "ˈsiːkwəns",
+        "translation": "порядок"
+      },
+      {
+        "word": "foundations",
+        "transcription": "faʊnˈdeɪʃnz",
+        "translation": "основы"
+      }
+    ],
+    "source_url": "https://science.mail.ru/news/59699-otnoshenie-rossiyan-k-platnym-obrazovatelnym-ii-produktam/",
+    "channel_message_id": 86,
+    "discussion_message_id": 119,
+    "comment_message_id": 122,
+    "article_url": "https://science.mail.ru/news/59699-otnoshenie-rossiyan-k-platnym-obrazovatelnym-ii-produktam/",
+    "image_urls": [
+      "https://resizer.mail.ru/p/5515fda7-7740-5951-89e7-206e2c76af10/AQA4tVrHO27weBA-FZy1D_AYZKTeiVfuCSLM8a9MOzNECchYX8DUcZn-MrrB1zV_LlNmVyzF-tHtb-u8aJziva_32L0.jpg",
+      "https://resizer.mail.ru/p/117a3ce9-31a7-5090-85ef-41fff70a3413/dpr:200/AQA4lEqh7a55GUwK6Vd6PQd-OQEXWtkZU517yuVXLXxm21JR-V69OLD_HbiKByMpqxHZIuU6NGjBuJvY_VAr_nQaIBY.png",
+      "https://resizer.mail.ru/p/f754af12-38ef-51a7-857b-b5cb81558b06/dpr:142/AQA45wTocm3Hom9Xhb6m2O7JYrjv9dKoiTxaRKiYQZKkT0rfNjWlqUabPjVqiGN-dUBy8NI7SPKVjUyKzpqeCTj-_Ps.png"
+    ],
+    "image_hashes": [
+      "db30c591c668c667254968900df595e4b31cf3d2fdd27057ada853e94eb5fc45",
+      "cfad9d07fc52861dd9aa3ecb98f6c84f381d05cbd4e10aa77bc279ba2672439f",
+      "e709d3da22f6b62411a137efa1e803944ca0716110f98a3393d6fede34df4bf1"
+    ],
+    "image_fingerprints": [
+      "4c8e2b2b2f53171e",
+      "b591024402038381",
+      "b6a705090b0d0787",
+      "694d0f071f170f8f",
+      "e88c172b1f37170f",
+      "d6f63f5f7ebfb7b6",
+      "b23a2f4f5f2f3f3a",
+      "4000010203030103",
+      "0303050a0c04060e",
+      "573bdf4f9f8fefcf",
+      "090b192531150c15",
+      "1f1f2f5767273777",
+      "0b070b1313130d19",
+      "0f070713131b0b1b",
+      "e4c0c4c042c4ccdc",
+      "70b0f0e0f072b4a4",
+      "d07160e0a0b17363",
+      "3b2f6c7cd6b6cecc",
+      "f0b2e0e0f1f03626",
+      "899008080c0a3878",
+      "7c5858f8a8b8d9db"
+    ],
+    "channel_message_ids": [
+      86,
+      87,
+      88
+    ]
   }
 ]
