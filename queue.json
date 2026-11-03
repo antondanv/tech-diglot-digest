@@ -1,57 +1,5 @@
 [
   {
-    "headline": "Новый подход к CSS: как сделать интерфейсы удобнее и быстрее 🎨",
-    "topic": "Оптимизация CSS-стилей для веб-разработки",
-    "text": "Разработчик представил набор базовых methods для улучшения верстки сайтов. Например, использование свойства scrollbar-gutter помогает избежать сдвигов контента при появлении полосы прокрутки.\n\nАвтор также рекомендует внедрять инструмент light-dark для автоматической смены тем оформления. Эти простые решения делают appearance более предсказуемым для пользователей и упрощают support проекта.",
-    "dictionary": [
-      {
-        "word": "methods",
-        "transcription": "ˈmeθədz",
-        "translation": "методы"
-      },
-      {
-        "word": "appearance",
-        "transcription": "əˈpɪərəns",
-        "translation": "внешний вид"
-      },
-      {
-        "word": "support",
-        "transcription": "səˈpɔːt",
-        "translation": "сопровождение"
-      }
-    ],
-    "source_url": "https://habr.com/ru/companies/ruvds/articles/1101388/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1101388",
-    "article_url": "https://habr.com/ru/companies/ruvds/articles/1101388/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1101388",
-    "image_urls": [
-      "https://habrastorage.org/extt/b8/73/b7/b873b7a25d8d66cd05b7147d2782949f.png",
-      "https://habrastorage.org/extt/7d/9e/2b/7d9e2b8d7bdd5f2c4219028caf03b678.png"
-    ],
-    "image_hashes": [
-      "67e68d4dbdcad652d06ea29c5c51e121b571376fd741c145a2884c6778c8a912",
-      "c8f30b354ac990c9b543a4a9bbd74f1fcd2cd121e4a0ce68d15c0ec4ce5ce789"
-    ],
-    "image_fingerprints": [
-      "6163b038212d8a9e",
-      "6163b038212d889e",
-      "d0e1227864642d1f",
-      "2931999c13939285",
-      "9238cccd8c9cc583",
-      "4b8bc8e19999122e",
-      "03271191a161e5fc",
-      "92c26358cac64c1b",
-      "48c0408a009000c0",
-      "0000004b03830303",
-      "0100006e06020606",
-      "8080803703810383",
-      "2300002404250606",
-      "0300002405150686",
-      "8300002404350686",
-      "8300002404250606",
-      "030000cc0da50c0c",
-      "07000058191b1818"
-    ]
-  },
-  {
     "headline": "Google расширяет тестирование ИИ-приложения Dreambeans в Индии 🇮🇳",
     "topic": "Запуск приложения Dreambeans в Индии",
     "text": "Google выводит pilot сервис Dreambeans на международный рынок. Приложение создает персональные подборки историй, изучая intelligence из календаря, почты и других подключенных сервисов пользователя.\n\nИндия стала первой страной вне США, где доступен этот resource. Разработчики проверяют, насколько людям полезна лента, которая самостоятельно выбирает темы из личной информации без бесконечного пролистывания.",
