@@ -2325,5 +2325,53 @@
       92,
       93
     ]
+  },
+  {
+    "topic": "Сокращение расходов Apple на ИИ",
+    "headline": "Apple урезает бюджеты на ИИ: инженерам ограничили ежедневные траты 💸",
+    "text": "Компания Apple решила снизить внутренние расходы на искусственный интеллект. Теперь инженерам установили жесткий limit на ежедневное использование нейросетей, чтобы контролировать рост затрат на токены.\n\nРанее лимиты были гораздо выше, но теперь компания стремится optimize свои процессы. По прогнозам, для сотрудников не из инженерных отделов дневной budget могут сократить до 25 долларов.",
+    "dictionary": [
+      {
+        "word": "limit",
+        "transcription": "ˈlɪmɪt",
+        "translation": "лимит"
+      },
+      {
+        "word": "optimize",
+        "transcription": "ˈɒptɪmaɪz",
+        "translation": "оптимизировать"
+      },
+      {
+        "word": "budget",
+        "transcription": "ˈbʌdʒɪt",
+        "translation": "бюджет"
+      }
+    ],
+    "source_url": "https://www.cnews.ru/news/top/2026-11-05_samaya_dorogaya_kompaniya_v",
+    "channel_message_id": 94,
+    "discussion_message_id": 130,
+    "comment_message_id": 131,
+    "article_url": "https://www.cnews.ru/news/top/2026-11-05_samaya_dorogaya_kompaniya_v",
+    "image_urls": [
+      "https://static.cnews.ru/img/news/2026/11/05/ai6.jpg"
+    ],
+    "image_hashes": [
+      "7530928e14bf65f7770345316caf617dd444a26a620765afef37c67ece718af3"
+    ],
+    "image_fingerprints": [
+      "6c68c9b73917071d",
+      "33a727d5a7df1f66",
+      "9b1b73e5cd9491a3",
+      "316bcbdd9b9387c7",
+      "6969cbd69b1707cb",
+      "e93b6bdfdd939787",
+      "bd3d6dde998387cd",
+      "e92bcbdd9b9787cb",
+      "7b7bdbbd33270f9a",
+      "6bcbd79b9387c7db"
+    ],
+    "channel_message_ids": [
+      94
+    ]
   }
 ]

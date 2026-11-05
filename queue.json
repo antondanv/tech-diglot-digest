@@ -1,1 +1,94 @@
-[]
+[
+  {
+    "headline": "Россияне тратят сотни миллионов на доступ к зарубежным нейросетям 🌐",
+    "topic": "Рынок посреднических услуг доступа к ИИ",
+    "text": "На фоне блокировок со стороны иностранных разработчиков российские компании массово покупают доступ к нейросетям через посредников. Месячный оборот этого серого рынка уже достиг 150 миллионов рублей.\n\nНеофициальные suppliers используют фермы аккаунтов и китайские прокси, чтобы обходить restrictions. Эксперты предупреждают, что такие запросы часто проходят через цепочку посредников, что создает риск утечки confidential информации.",
+    "dictionary": [
+      {
+        "word": "restrictions",
+        "transcription": "rɪˈstrɪkʃnz",
+        "translation": "ограничения"
+      },
+      {
+        "word": "confidential",
+        "transcription": "ˌkɒnfɪˈdenʃl",
+        "translation": "конфиденциальный"
+      },
+      {
+        "word": "suppliers",
+        "transcription": "səˈplaɪəz",
+        "translation": "поставщики"
+      }
+    ],
+    "source_url": "https://ru.themoscowtimes.com/2026/11/05/rossiyane-nachali-tratit-sotni-millionov-na-podpolnii-dostup-k-ii-posle-blokirovok-a210588",
+    "article_url": "https://ru.themoscowtimes.com/2026/11/05/rossiyane-nachali-tratit-sotni-millionov-na-podpolnii-dostup-k-ii-posle-blokirovok-a210588",
+    "image_urls": [
+      "https://ru.themoscowtimes.com/image/og/9a/210588__9a7f4147e5e727ed32e2aed116784fcd.jpg"
+    ],
+    "image_hashes": [
+      "f3f6a78a26bcd9b8c213f615d3cd4a29694a6d748f8174ab2dc1c93b7d505755"
+    ],
+    "image_fingerprints": [
+      "068614150c14c121",
+      "18989393b3931383",
+      "1899525633538786",
+      "09882b3f1303c646",
+      "1b1a55573717868c",
+      "199a35371717c64e",
+      "199a75151717c64e",
+      "85883337363e3830",
+      "01c929098b095198",
+      "63644b4b4f4f0c1c"
+    ]
+  },
+  {
+    "headline": "Инженерные вакансии: почему за красивым названием скрывается отчетность 📄",
+    "topic": "Анализ содержания инженерных вакансий",
+    "text": "Исследование 63 тысяч вакансий показало, что слово инженер часто используется для описания рутинной офисной работы. В 20% случаев обязанности специалиста сводятся к оформлению договоров и подготовке документов.\n\nПри этом доля вакансий с акцентом на собственные технические решения составляет лишь треть. Часто содержание работы определяется не должностью, а формулировкой в description, где предлог «по» в названии открывает путь к administrative tasks.",
+    "dictionary": [
+      {
+        "word": "description",
+        "transcription": "dɪˈskrɪpʃn",
+        "translation": "описание"
+      },
+      {
+        "word": "administrative",
+        "transcription": "ədˈmɪnɪstrətɪv",
+        "translation": "административный"
+      },
+      {
+        "word": "tasks",
+        "transcription": "tɑːsks",
+        "translation": "задачи"
+      }
+    ],
+    "source_url": "https://habr.com/ru/companies/ecopsy/articles/1104230/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1104230",
+    "article_url": "https://habr.com/ru/companies/ecopsy/articles/1104230/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1104230",
+    "image_urls": [
+      "https://habrastorage.org/extt/71/95/61/71956104d1cde55442cc1c792ab3823e.png",
+      "https://habrastorage.org/extt/09/b9/66/09b966bb20ab9da13298275510c79dab.png"
+    ],
+    "image_hashes": [
+      "5ed400bc7603a3e71490167b7f35d6829a06a389bad9de358356b3e717f83846",
+      "5452763aea5c66f56a756253cc2c9e2e2a87ad14b1f466b8e0d3ade338e65a2a"
+    ],
+    "image_fingerprints": [
+      "0039303030303030",
+      "3030303030303030",
+      "3030303030303031",
+      "3030303030303830",
+      "0639303030303030",
+      "3030303030903031",
+      "2060001064a05262",
+      "041c626268716464",
+      "90a000429090a484",
+      "083864e4f0e0ccc9",
+      "081864646070684a",
+      "a968c5c4d9e1cac8",
+      "234a313172343232",
+      "9018c8c8d2e0d892",
+      "2c4805c654649b98",
+      "5a42181c381b1818"
+    ]
+  }
+]
