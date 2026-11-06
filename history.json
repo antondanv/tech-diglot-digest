@@ -2421,5 +2421,62 @@
     "channel_message_ids": [
       95
     ]
+  },
+  {
+    "topic": "Анализ содержания инженерных вакансий",
+    "headline": "Инженерные вакансии: почему за красивым названием скрывается отчетность 📄",
+    "text": "Исследование 63 тысяч вакансий показало, что слово инженер часто используется для описания рутинной офисной работы. В 20% случаев обязанности специалиста сводятся к оформлению договоров и подготовке документов.\n\nПри этом доля вакансий с акцентом на собственные технические решения составляет лишь треть. Часто содержание работы определяется не должностью, а формулировкой в description, где предлог «по» в названии открывает путь к administrative tasks.",
+    "dictionary": [
+      {
+        "word": "description",
+        "transcription": "dɪˈskrɪpʃn",
+        "translation": "описание"
+      },
+      {
+        "word": "administrative",
+        "transcription": "ədˈmɪnɪstrətɪv",
+        "translation": "административный"
+      },
+      {
+        "word": "tasks",
+        "transcription": "tɑːsks",
+        "translation": "задачи"
+      }
+    ],
+    "source_url": "https://habr.com/ru/companies/ecopsy/articles/1104230/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1104230",
+    "channel_message_id": 96,
+    "discussion_message_id": 134,
+    "comment_message_id": 136,
+    "article_url": "https://habr.com/ru/companies/ecopsy/articles/1104230/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1104230",
+    "image_urls": [
+      "https://habrastorage.org/extt/71/95/61/71956104d1cde55442cc1c792ab3823e.png",
+      "https://habrastorage.org/extt/09/b9/66/09b966bb20ab9da13298275510c79dab.png"
+    ],
+    "image_hashes": [
+      "5ed400bc7603a3e71490167b7f35d6829a06a389bad9de358356b3e717f83846",
+      "5452763aea5c66f56a756253cc2c9e2e2a87ad14b1f466b8e0d3ade338e65a2a"
+    ],
+    "image_fingerprints": [
+      "0039303030303030",
+      "3030303030303030",
+      "3030303030303031",
+      "3030303030303830",
+      "0639303030303030",
+      "3030303030903031",
+      "2060001064a05262",
+      "041c626268716464",
+      "90a000429090a484",
+      "083864e4f0e0ccc9",
+      "081864646070684a",
+      "a968c5c4d9e1cac8",
+      "234a313172343232",
+      "9018c8c8d2e0d892",
+      "2c4805c654649b98",
+      "5a42181c381b1818"
+    ],
+    "channel_message_ids": [
+      96,
+      97
+    ]
   }
 ]
