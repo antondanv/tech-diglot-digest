@@ -2373,5 +2373,53 @@
     "channel_message_ids": [
       94
     ]
+  },
+  {
+    "topic": "Рынок посреднических услуг доступа к ИИ",
+    "headline": "Россияне тратят сотни миллионов на доступ к зарубежным нейросетям 🌐",
+    "text": "На фоне блокировок со стороны иностранных разработчиков российские компании массово покупают доступ к нейросетям через посредников. Месячный оборот этого серого рынка уже достиг 150 миллионов рублей.\n\nНеофициальные suppliers используют фермы аккаунтов и китайские прокси, чтобы обходить restrictions. Эксперты предупреждают, что такие запросы часто проходят через цепочку посредников, что создает риск утечки confidential информации.",
+    "dictionary": [
+      {
+        "word": "restrictions",
+        "transcription": "rɪˈstrɪkʃnz",
+        "translation": "ограничения"
+      },
+      {
+        "word": "confidential",
+        "transcription": "ˌkɒnfɪˈdenʃl",
+        "translation": "конфиденциальный"
+      },
+      {
+        "word": "suppliers",
+        "transcription": "səˈplaɪəz",
+        "translation": "поставщики"
+      }
+    ],
+    "source_url": "https://ru.themoscowtimes.com/2026/11/05/rossiyane-nachali-tratit-sotni-millionov-na-podpolnii-dostup-k-ii-posle-blokirovok-a210588",
+    "channel_message_id": 95,
+    "discussion_message_id": 132,
+    "comment_message_id": 133,
+    "article_url": "https://ru.themoscowtimes.com/2026/11/05/rossiyane-nachali-tratit-sotni-millionov-na-podpolnii-dostup-k-ii-posle-blokirovok-a210588",
+    "image_urls": [
+      "https://ru.themoscowtimes.com/image/og/9a/210588__9a7f4147e5e727ed32e2aed116784fcd.jpg"
+    ],
+    "image_hashes": [
+      "f3f6a78a26bcd9b8c213f615d3cd4a29694a6d748f8174ab2dc1c93b7d505755"
+    ],
+    "image_fingerprints": [
+      "068614150c14c121",
+      "18989393b3931383",
+      "1899525633538786",
+      "09882b3f1303c646",
+      "1b1a55573717868c",
+      "199a35371717c64e",
+      "199a75151717c64e",
+      "85883337363e3830",
+      "01c929098b095198",
+      "63644b4b4f4f0c1c"
+    ],
+    "channel_message_ids": [
+      95
+    ]
   }
 ]
