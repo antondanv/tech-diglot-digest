@@ -2478,5 +2478,79 @@
       96,
       97
     ]
+  },
+  {
+    "topic": "Плеер Nimbus для SoundCloud на macOS",
+    "headline": "Энтузиаст создал быстрый плеер SoundCloud для macOS 🎵",
+    "text": "Разработчик выпустил Nimbus — native клиент SoundCloud для компьютеров Mac. Новая программа обеспечивает непрерывное playback музыки, сокращая паузу между треками до двадцати миллисекунд с помощью двух независимых плееров.\n\nИнструмент поддерживает системные клавиши, отображение комментариев и передачу звука на колонки через сетевой protocol без официального набора инструментов. Проект полностью бесплатен и доступен для загрузки на устройства с процессорами Apple Silicon.",
+    "dictionary": [
+      {
+        "word": "native",
+        "transcription": "ˈneɪtɪv",
+        "translation": "нативный"
+      },
+      {
+        "word": "playback",
+        "transcription": "ˈpleɪbæk",
+        "translation": "воспроизведение"
+      },
+      {
+        "word": "protocol",
+        "transcription": "ˈprəʊtəkɒl",
+        "translation": "протокол"
+      }
+    ],
+    "source_url": "https://habr.com/ru/articles/1104970/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1104970",
+    "channel_message_id": 98,
+    "discussion_message_id": 137,
+    "comment_message_id": 140,
+    "article_url": "https://habr.com/ru/articles/1104970/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1104970",
+    "image_urls": [
+      "https://habrastorage.org/extt/3e/83/6b/3e836b4010fadfe5bb1aeb1e0a1a9f49.png",
+      "https://habrastorage.org/extt/5b/d4/73/5bd473a2446adefb3b3e7ec318b7b9c9.png",
+      "https://habrastorage.org/extt/3b/b3/ab/3bb3abb3ccbaf606d99bf46671ebba40.png"
+    ],
+    "image_hashes": [
+      "c1c7086f3b17d65f944d2de1a59dd12b8732ef95cf0e6aadfa7a7cfc8ce829c1",
+      "4c3b40154bef9ce9df0dabc8d1dfb4decb5b4956aea7b8bb53b0cffc7dbd2b2d",
+      "ee31cd590c6b2ee81ccfe8a97936a3fdbcf8da90999c254af2ec2fbf568023f1"
+    ],
+    "image_fingerprints": [
+      "c0808b8bc3879f7f",
+      "e0e06165b3e3ef1f",
+      "f8f8595978787387",
+      "f0f0717373717767",
+      "fefc6c6e363434cb",
+      "f0e07133b0a2a74f",
+      "f0f071737171778f",
+      "f0f0b2b2f1f1f70f",
+      "f07073735171778f",
+      "e07173737177778f",
+      "5e5e4f4b1a5c4ac2",
+      "3b1b0b2b33310b8a",
+      "391b1b0b3b3b310b",
+      "e3e5e527a7c76366",
+      "79391b0b3b333b8b",
+      "f8793d4c69714808",
+      "7819190d3939198d",
+      "f93839292939b98b",
+      "78391b1b0b333b31",
+      "7133331b7373331b",
+      "5955555e151446c4",
+      "0f0b3337271b1386",
+      "600f0f3b3327371b",
+      "95afa7c7afafefce",
+      "3f0f3b3337371b17",
+      "610f0b3337371b96",
+      "e44b5f72735a1b13",
+      "e20f1b7327673736",
+      "71070d3913330b9b",
+      "e50f1f3337331b93"
+    ],
+    "channel_message_ids": [
+      98,
+      99,
+      100
+    ]
   }
 ]

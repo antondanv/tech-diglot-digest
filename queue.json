@@ -1,1 +1,94 @@
-[]
+[
+  {
+    "headline": "Программист обучил нейросеть предсказывать охваты статей 📊",
+    "topic": "Прогнозирование просмотров на Хабре через ML",
+    "text": "Российский специалист создал модель машинного обучения, чтобы заранее оценивать популярность публикаций на платформе Хабр. Анализ десятков материалов показал, что решающий factor успеха в ленте — короткий заголовок длиной около пятидесяти символов.\n\nВ ходе экспериментов автор устранил влияние искаженных параметров, чтобы сформировать объективный prediction для новых статей. Итоговый расчет подтвердил, что подробные тексты с несколькими иллюстрациями получают ощутимое advantage по охватам.",
+    "dictionary": [
+      {
+        "word": "factor",
+        "transcription": "ˈfæktər",
+        "translation": "фактор"
+      },
+      {
+        "word": "prediction",
+        "transcription": "prɪˈdɪkʃən",
+        "translation": "прогноз"
+      },
+      {
+        "word": "advantage",
+        "transcription": "ədˈvɑːntɪdʒ",
+        "translation": "преимущество"
+      }
+    ],
+    "source_url": "https://habr.com/ru/articles/1104972/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1104972",
+    "article_url": "https://habr.com/ru/articles/1104972/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1104972",
+    "image_urls": [
+      "https://habrastorage.org/extt/79/a7/32/79a732a324e7e9281164ba0791a37919.png",
+      "https://habrastorage.org/extt/ad/02/97/ad029736cc5f48aea91ffa063935e022.png"
+    ],
+    "image_hashes": [
+      "ac97305d20ff87881fe3b6c63b02b73bf1e417d11c08ce48b574b953e583b4fe",
+      "ec33fb26ed68a97c755927e639a92f863d528f00e7c629c857103f41d23589da"
+    ],
+    "image_fingerprints": [
+      "03e0604c4c60e003",
+      "8138185256183881",
+      "c00c2e2c2d2c0cc0",
+      "066179e9e9786106",
+      "847133696b317384",
+      "0cc3c393b3c3c70c",
+      "300b4747c7c30d10",
+      "2727e685a322a222",
+      "a6a76543872667a6",
+      "d747236747b7a767",
+      "6aaaea42636a2b2b",
+      "2ca4da922e32b3ad",
+      "6d2d1991a14d5d2d",
+      "6cec3c7c6e2e2eae",
+      "321ba64a5a6b2d13",
+      "5676cede7e667e76",
+      "9b9f978f9f939f9b"
+    ]
+  },
+  {
+    "headline": "В Белом доме распорядились называть нейросети суперинтеллектом 🏛️",
+    "topic": "Ребрендинг понятия ИИ в США",
+    "text": "Президент США Дональд Трамп подписал указ, обязав государственные ведомства заменить привычное название искусственного интеллекта на новый term. По мнению политика, прежнее определение кажется неточным на фоне стремительных успехов компьютерных технологий.\n\nУченые раскритиковали этот шаг, посчитав громкое заявление преждевременным из-за ограниченных возможностей современных моделей. Однако эксперты отмечают, что подобный rebranding призван защитить глобальное leadership местных разработчиков в международной гонке.",
+    "dictionary": [
+      {
+        "word": "term",
+        "transcription": "tɜːm",
+        "translation": "термин"
+      },
+      {
+        "word": "rebranding",
+        "transcription": "riːˈbrændɪŋ",
+        "translation": "ребрендинг"
+      },
+      {
+        "word": "leadership",
+        "transcription": "ˈliːdərʃɪp",
+        "translation": "лидерство"
+      }
+    ],
+    "source_url": "https://www.dw.com/ru/donald-tramp-hocet-pereimenovat-ii-v-superintellekt-cto-ne-tak/a-79875097",
+    "article_url": "https://www.dw.com/ru/donald-tramp-hocet-pereimenovat-ii-v-superintellekt-cto-ne-tak/a-79875097",
+    "image_urls": [
+      "https://static.dw.com/image/77591721_6.jpg"
+    ],
+    "image_hashes": [
+      "992013474f720d2436ff52d4e797012539f2d1ba1dd6eef7676aff428351bf97"
+    ],
+    "image_fingerprints": [
+      "1189030509272901",
+      "8982228386111200",
+      "27070f17170f1707",
+      "25070f17170f1707",
+      "27170f17170f1707",
+      "8b4e1f2f4f3f4b0d",
+      "93221713339ab313",
+      "56171717170d9616",
+      "97be3ebe3eef373b"
+    ]
+  }
+]
