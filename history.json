@@ -2610,5 +2610,52 @@
       101,
       102
     ]
+  },
+  {
+    "topic": "Ребрендинг понятия ИИ в США",
+    "headline": "В Белом доме распорядились называть нейросети суперинтеллектом 🏛️",
+    "text": "Президент США Дональд Трамп подписал указ, обязав государственные ведомства заменить привычное название искусственного интеллекта на новый term. По мнению политика, прежнее определение кажется неточным на фоне стремительных успехов компьютерных технологий.\n\nУченые раскритиковали этот шаг, посчитав громкое заявление преждевременным из-за ограниченных возможностей современных моделей. Однако эксперты отмечают, что подобный rebranding призван защитить глобальное leadership местных разработчиков в международной гонке.",
+    "dictionary": [
+      {
+        "word": "term",
+        "transcription": "tɜːm",
+        "translation": "термин"
+      },
+      {
+        "word": "rebranding",
+        "transcription": "riːˈbrændɪŋ",
+        "translation": "ребрендинг"
+      },
+      {
+        "word": "leadership",
+        "transcription": "ˈliːdərʃɪp",
+        "translation": "лидерство"
+      }
+    ],
+    "source_url": "https://www.dw.com/ru/donald-tramp-hocet-pereimenovat-ii-v-superintellekt-cto-ne-tak/a-79875097",
+    "channel_message_id": 103,
+    "discussion_message_id": 144,
+    "comment_message_id": 145,
+    "article_url": "https://www.dw.com/ru/donald-tramp-hocet-pereimenovat-ii-v-superintellekt-cto-ne-tak/a-79875097",
+    "image_urls": [
+      "https://static.dw.com/image/77591721_6.jpg"
+    ],
+    "image_hashes": [
+      "992013474f720d2436ff52d4e797012539f2d1ba1dd6eef7676aff428351bf97"
+    ],
+    "image_fingerprints": [
+      "1189030509272901",
+      "8982228386111200",
+      "27070f17170f1707",
+      "25070f17170f1707",
+      "27170f17170f1707",
+      "8b4e1f2f4f3f4b0d",
+      "93221713339ab313",
+      "56171717170d9616",
+      "97be3ebe3eef373b"
+    ],
+    "channel_message_ids": [
+      103
+    ]
   }
 ]
