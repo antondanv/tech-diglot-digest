@@ -2657,5 +2657,63 @@
     "channel_message_ids": [
       103
     ]
+  },
+  {
+    "topic": "Расследование в отношении Дженсена Хуанга",
+    "headline": "Глава Nvidia извинился после скандала с потенциальной шпионкой 🕵️",
+    "text": "Дженсен Хуанг признал наличие личных отношений с руководительницей сингапурской компании Элис Хуан. Американские власти подозревают её в работе на китайскую разведку и передаче передовых чипов Nvidia в обход экспортных barriers. Совет директоров компании уже инициировал независимый audit.\n\nХуанг публично извинился перед коллегами и семьей за свои действия. При этом руководство Nvidia не видит оснований полагать, что корпоративные секреты или национальная безопасность были compromised.",
+    "dictionary": [
+      {
+        "word": "barriers",
+        "transcription": "ˈbæriərz",
+        "translation": "барьеры"
+      },
+      {
+        "word": "audit",
+        "transcription": "ˈɔːdɪt",
+        "translation": "аудит"
+      },
+      {
+        "word": "compromised",
+        "transcription": "ˈkɒmprəmaɪzd",
+        "translation": "скомпрометированы"
+      }
+    ],
+    "source_url": "https://habr.com/ru/articles/1105522/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1105522",
+    "channel_message_id": 104,
+    "discussion_message_id": 146,
+    "comment_message_id": 148,
+    "article_url": "https://habr.com/ru/articles/1105522/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1105522",
+    "image_urls": [
+      "https://habr.com/share/publication/1105522/8056d58f6927fd81d3f25a26094233f2/",
+      "https://habrastorage.org/extt/4f/74/b0/4f74b0a19c1e2b9f3a5c6f8d4f80f243.jpg"
+    ],
+    "image_hashes": [
+      "29d3097c783e908a34863cf8031438aec66f871d8a6f3c43008802dd271c0967",
+      "b62229aa206ff4c83639ec77f553eacd6d2f53397036498c8a66ff6e49964574"
+    ],
+    "image_fingerprints": [
+      "0000444f676080c0",
+      "090946f670000000",
+      "0505233bd8c00000",
+      "4242414776306060",
+      "8080080e76604060",
+      "c4c4034f7c306060",
+      "c0c00b0f3e30e060",
+      "c4c4038f7c704060",
+      "703004546626484c",
+      "6060424359587030",
+      "19191999031b1222",
+      "353634360e2c2b42",
+      "666363634f6f4ca4",
+      "666636230e2c2dc5",
+      "3531311959716b6c",
+      "0c8c064e20040c30",
+      "cbc9c9cd1cd99716"
+    ],
+    "channel_message_ids": [
+      104,
+      105
+    ]
   }
 ]

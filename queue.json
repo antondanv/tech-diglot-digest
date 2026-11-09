@@ -1,1 +1,104 @@
-[]
+[
+  {
+    "headline": "Родители подали в суд на Google из-за ИИ на школьных ноутбуках ⚖️",
+    "topic": "Иск против Google из-за ИИ на Chromebook",
+    "text": "В Верховный суд Калифорнии поступил иск от родителей, чья дочь планировала самоубийство после общения с чат-ботом на школьном Chromebook. Истцы утверждают, что Google implemented ИИ-функции без уведомления родителей о рисках.\n\nКомпания настаивает, что создала инструменты защиты для помощи людям в critical ситуациях. Сейчас корпорация рассматривает претензии и планирует разрешить школам отключать нейросетевые options в поисковике, хотя это ограничит доступ к самому Google Search.",
+    "dictionary": [
+      {
+        "word": "implemented",
+        "transcription": "ˈɪmplɪmentɪd",
+        "translation": "внедрила"
+      },
+      {
+        "word": "critical",
+        "transcription": "ˈkrɪtɪkl",
+        "translation": "критический"
+      },
+      {
+        "word": "options",
+        "transcription": "ˈɒpʃnz",
+        "translation": "опции"
+      }
+    ],
+    "source_url": "https://habr.com/ru/articles/1105520/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1105520",
+    "article_url": "https://habr.com/ru/articles/1105520/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1105520",
+    "image_urls": [
+      "https://habrastorage.org/extt/c9/7b/44/c97b44dcd520c9fccd96e40064a3aaa2.jpg"
+    ],
+    "image_hashes": [
+      "3e2f1222c6bd254cceb41aaa314511b94bad9d099ed291e90c4f6aece37cb6f6"
+    ],
+    "image_fingerprints": [
+      "52514707630d0c20",
+      "99901121606607c1",
+      "26234f4fc35b1c84",
+      "d9d093a3a02c8662",
+      "8e832d2f03627808",
+      "733332263404a40c",
+      "64646948380b0310"
+    ]
+  },
+  {
+    "headline": "Как документация стала главным инструментом для автотестов Claude 🤖",
+    "topic": "Использование Claude для написания автотестов",
+    "text": "Тестировщики начали использовать Claude для генерации тест-кейсов и кода на основе descriptions. Теперь модель анализирует технические тексты через MCP-сервер, что позволяет создавать автотесты даже для недоделанных функций.\n\nТакой подход помогает находить ошибки на ранних этапах и быстрее correct проверки при обновлении интерфейса. Разработчики отмечают, что качество исходных данных теперь напрямую влияет на скорость development.",
+    "dictionary": [
+      {
+        "word": "descriptions",
+        "transcription": "dɪˈskrɪpʃnz",
+        "translation": "описания"
+      },
+      {
+        "word": "correct",
+        "transcription": "kəˈrekt",
+        "translation": "корректировать"
+      },
+      {
+        "word": "development",
+        "transcription": "dɪˈveləpmənt",
+        "translation": "разработка"
+      }
+    ],
+    "source_url": "https://habr.com/ru/articles/1105574/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1105574",
+    "article_url": "https://habr.com/ru/articles/1105574/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1105574",
+    "image_urls": [
+      "https://habrastorage.org/extt/79/bc/b3/79bcb32d6cc18cd693de669b1fdc736f.png",
+      "https://habrastorage.org/extt/b7/d1/5a/b7d15a8adaba3f85c661d5564da26433.png",
+      "https://habrastorage.org/extt/df/90/e6/df90e6c363e1233f652dee285799c50f.png"
+    ],
+    "image_hashes": [
+      "b18736d852948d63ae6af7323592627fbf1ef621ccca08d7d391c9a684ca4f70",
+      "b27c31bf86ee9ff860baf6fc89e8c54954885a1aaaf7e64a70649bfd6a5ed29d",
+      "0604f380834b2d80839769e8c73b647748e4b7925ba2a131b1e5a831ccf109cf"
+    ],
+    "image_fingerprints": [
+      "0e6cf0b078e4f0c1",
+      "46169cb898347860",
+      "02e0b989c8c10703",
+      "118fce4e4e9d3e18",
+      "08c3b3b793860f0c",
+      "128eecacac8e1c18",
+      "2027cf4f4e1d3f18",
+      "c2adadad639c995b",
+      "885555154c30347d",
+      "0db6b2b604703666",
+      "c124262664022464",
+      "a0939393308e8626",
+      "88545755cc303078",
+      "88565656cc3130b8",
+      "215a5a5a12c1d0d2",
+      "0894d4d4cc3035b4",
+      "885656164c313078",
+      "250565c029292a26",
+      "5319988045094929",
+      "ac8c00100e1fbb27",
+      "24223a7108190b0c",
+      "325a58085256989a",
+      "1b2b696433343410",
+      "57970024939785af",
+      "66260088474fa993",
+      "50dad804b3931919",
+      "d058b80431a31a19"
+    ]
+  }
+]
