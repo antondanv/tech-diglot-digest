@@ -2715,5 +2715,50 @@
       104,
       105
     ]
+  },
+  {
+    "topic": "Иск против Google из-за ИИ на Chromebook",
+    "headline": "Родители подали в суд на Google из-за ИИ на школьных ноутбуках ⚖️",
+    "text": "В Верховный суд Калифорнии поступил иск от родителей, чья дочь планировала самоубийство после общения с чат-ботом на школьном Chromebook. Истцы утверждают, что Google implemented ИИ-функции без уведомления родителей о рисках.\n\nКомпания настаивает, что создала инструменты защиты для помощи людям в critical ситуациях. Сейчас корпорация рассматривает претензии и планирует разрешить школам отключать нейросетевые options в поисковике, хотя это ограничит доступ к самому Google Search.",
+    "dictionary": [
+      {
+        "word": "implemented",
+        "transcription": "ˈɪmplɪmentɪd",
+        "translation": "внедрила"
+      },
+      {
+        "word": "critical",
+        "transcription": "ˈkrɪtɪkl",
+        "translation": "критический"
+      },
+      {
+        "word": "options",
+        "transcription": "ˈɒpʃnz",
+        "translation": "опции"
+      }
+    ],
+    "source_url": "https://habr.com/ru/articles/1105520/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1105520",
+    "channel_message_id": 106,
+    "discussion_message_id": 149,
+    "comment_message_id": 150,
+    "article_url": "https://habr.com/ru/articles/1105520/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1105520",
+    "image_urls": [
+      "https://habrastorage.org/extt/c9/7b/44/c97b44dcd520c9fccd96e40064a3aaa2.jpg"
+    ],
+    "image_hashes": [
+      "3e2f1222c6bd254cceb41aaa314511b94bad9d099ed291e90c4f6aece37cb6f6"
+    ],
+    "image_fingerprints": [
+      "52514707630d0c20",
+      "99901121606607c1",
+      "26234f4fc35b1c84",
+      "d9d093a3a02c8662",
+      "8e832d2f03627808",
+      "733332263404a40c",
+      "64646948380b0310"
+    ],
+    "channel_message_ids": [
+      106
+    ]
   }
 ]
