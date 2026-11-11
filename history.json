@@ -2831,5 +2831,50 @@
       108,
       109
     ]
+  },
+  {
+    "topic": "Обсуждение ИИ в ядерной сфере",
+    "headline": "США, Россия и Китай ищут общие правила для ИИ в ядерной сфере 🛡️",
+    "text": "Россия, США и Китай ведут consultations по вопросу использования искусственного интеллекта в critically важных системах вооружений. Стороны обсуждают возможность принятия совместного заявления, чтобы зафиксировать минимальные договоренности и снизить вероятность непреднамеренных кризисов.\n\nЭксперты отмечают, что сейчас ИИ активно применяется в системах предупреждения о ракетном нападении для ускорения оценки ситуации. Поскольку время для принятия решения об ответном ударе крайне ограничено, важно, чтобы все участники диалога оперировали одними понятиями и principles для предотвращения катастроф.",
+    "dictionary": [
+      {
+        "word": "consultations",
+        "transcription": "ˌkɒnsəlˈteɪʃənz",
+        "translation": "консультации"
+      },
+      {
+        "word": "critically",
+        "transcription": "ˈkrɪtɪkli",
+        "translation": "критически"
+      },
+      {
+        "word": "principles",
+        "transcription": "ˈprɪnsəpəlz",
+        "translation": "принципы"
+      }
+    ],
+    "source_url": "https://vfokuse.mail.ru/articles/69651289-edinyij-yazyik-pochemu-ssha-rossiya-i-knr-ischut-obschie-pravila-dlya-ii-v-yadernoj-sfere/",
+    "channel_message_id": 110,
+    "discussion_message_id": 155,
+    "comment_message_id": 156,
+    "article_url": "https://vfokuse.mail.ru/articles/69651289-edinyij-yazyik-pochemu-ssha-rossiya-i-knr-ischut-obschie-pravila-dlya-ii-v-yadernoj-sfere/",
+    "image_urls": [
+      "https://resizer.mail.ru/p/cb98d116-dbff-5043-b703-17d34f1d61af/AQA1xxWAQCo_CKLLw3N4caM1d1xCNDv80oJw2zR8C8An-QHJO06L9ceVLUVthdB7WbLSOQIiSPJNHa0vZAMRiQ2P3Kk.png"
+    ],
+    "image_hashes": [
+      "f0f8b5ff3aac766b9fed9233d2746011f283316afad8cc882d089100bdf4a905"
+    ],
+    "image_fingerprints": [
+      "cfcf8f4f57470d5d",
+      "5bdacac6b4b2d2e2",
+      "77b7a79753d3c5c7",
+      "39b99189aae8e1cb",
+      "f3736233abb98286",
+      "f2f3eb2b2d252327",
+      "9e1e1a5f4f4f193b"
+    ],
+    "channel_message_ids": [
+      110
+    ]
   }
 ]
