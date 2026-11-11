@@ -2876,5 +2876,52 @@
     "channel_message_ids": [
       110
     ]
+  },
+  {
+    "topic": "Обновление ChatGPT",
+    "headline": "OpenAI полностью отключит старые голосовые режимы в ChatGPT 🎙️",
+    "text": "Компания OpenAI объявила о discontinuation режимов Advanced Voice Mode и Standard Voice Mode в ChatGPT с 11 декабря. Все усилия разработчиков теперь будут сосредоточены на развитии GPT-Live, который использует полнодуплексную architecture для более dynamic общения.\n\nПользователи, которые использовали старые версии, будут автоматически переведены на новую модель. При этом история прошлых диалогов сохранится, и их можно будет продолжить в текстовом формате или с помощью GPT-Live.",
+    "dictionary": [
+      {
+        "word": "discontinuation",
+        "transcription": "ˌdɪskəntɪnjuˈeɪʃən",
+        "translation": "прекращение поддержки"
+      },
+      {
+        "word": "architecture",
+        "transcription": "ˈɑːkɪtektʃə",
+        "translation": "архитектура"
+      },
+      {
+        "word": "dynamic",
+        "transcription": "daɪˈnæmɪk",
+        "translation": "динамичный"
+      }
+    ],
+    "source_url": "https://habr.com/ru/articles/1106660/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1106660",
+    "channel_message_id": 111,
+    "discussion_message_id": 157,
+    "comment_message_id": 158,
+    "article_url": "https://habr.com/ru/articles/1106660/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1106660",
+    "image_urls": [
+      "https://habrastorage.org/extt/fe/dd/6e/fedd6e7065cd2edec5a81bae630e496c.JPG"
+    ],
+    "image_hashes": [
+      "bc5b0a9dfaad9fb32aa12124fb51fd88e53ec6291097f582cc200cb145cfa9e9"
+    ],
+    "image_fingerprints": [
+      "7068606870707060",
+      "e0d0d0e0e0e0c0e0",
+      "7068687070706870",
+      "7068687070707070",
+      "7068707070707070",
+      "6068707070607070",
+      "6068707070707070",
+      "6870707060707070",
+      "3834343838383c38"
+    ],
+    "channel_message_ids": [
+      111
+    ]
   }
 ]
