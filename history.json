@@ -2923,5 +2923,66 @@
     "channel_message_ids": [
       111
     ]
+  },
+  {
+    "topic": "Обход санкций на поставку чипов",
+    "headline": "Китайские военные вузы находят способы купить чипы Nvidia 🇨🇳",
+    "text": "Несмотря на экспортные limitations США, китайские университеты, связанные с оборонным сектором, продолжают получать доступ к мощным ускорителям Nvidia. Вузы приобретают чипы через местных поставщиков или арендуют вычислительные мощности для обучения ИИ-моделей.\n\nАнализ закупок показал, что такие организации, как Северо-Западный политехнический университет, используют intermediaries для обхода запретов. Это создает серьезные loopholes в текущих мерах контроля за распространением передовых технологий.",
+    "dictionary": [
+      {
+        "word": "limitations",
+        "transcription": "ˌlɪmɪˈteɪʃənz",
+        "translation": "ограничения"
+      },
+      {
+        "word": "intermediaries",
+        "transcription": "ˌɪntəˈmiːdiəriz",
+        "translation": "посредники"
+      },
+      {
+        "word": "loopholes",
+        "transcription": "ˈluːpˌhəʊlz",
+        "translation": "пробелы"
+      }
+    ],
+    "source_url": "https://3dnews.ru/1151145/sanktsii-ssha-dali-treshchinu-kitayskie-universiteti-svyazannie-s-voennimi-nahodyat-puti-k-ogranichennim-chipam-nvidia",
+    "channel_message_id": 112,
+    "discussion_message_id": 159,
+    "comment_message_id": 161,
+    "article_url": "https://3dnews.ru/1151145/sanktsii-ssha-dali-treshchinu-kitayskie-universiteti-svyazannie-s-voennimi-nahodyat-puti-k-ogranichennim-chipam-nvidia",
+    "image_urls": [
+      "https://cdn.3dnews.ru/assets/external/illustrations/2026/11/11/1151145/nvidia_1.jpg",
+      "https://cdn.3dnews.ru/assets/external/illustrations/2026/11/11/1151145/nvidia_2.jpg"
+    ],
+    "image_hashes": [
+      "382298206135221bc9d76ba480ae812033130af6aa60fcbe9eb5958419c4d917",
+      "8ded982356a411d734646b27cba9d8988c022bad0371f6d2da51dbc639daec41"
+    ],
+    "image_fingerprints": [
+      "00070608035c5a0a",
+      "000f0f0f0fb38f0b",
+      "001f1f331b716b2b",
+      "00f8fcfc6ccd2d2d",
+      "000e1e160e362e0e",
+      "001e16160f332e2f",
+      "000e0e16160e362e",
+      "0e0e1e160e322e8e",
+      "0e1e160eba360e0f",
+      "001c1e3e1e665e16",
+      "06070d0c04010101",
+      "080c161b0b070606",
+      "10182c66260e0c08",
+      "181c3c37170e0c0c",
+      "101c6e7313072f0c",
+      "181c3e33170e0c0c",
+      "10181c3637170e0e",
+      "181c3637170e0e0c",
+      "1c3c36170e0e0c0c",
+      "4070b8cece3c3430"
+    ],
+    "channel_message_ids": [
+      112,
+      113
+    ]
   }
 ]
