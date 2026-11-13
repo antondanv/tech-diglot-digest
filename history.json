@@ -2984,5 +2984,79 @@
       112,
       113
     ]
+  },
+  {
+    "topic": "Релиз SMD CODES для iOS",
+    "headline": "В AppStore появилось приложение для поиска электронных компонентов по маркировке 📱",
+    "text": "Разработчик выпустил версию приложения SMD CODES для устройств на базе iOS. Инструмент позволяет быстро искать components по количеству выводов, маркировке и логотипам микросхем, что особенно полезно при ремонте плат с множеством мелких деталей.\n\nПрограмма предлагает удобный доступ к техническим parameters и размерам. Также внутри доступны калькуляторы для работы с резисторами, конденсаторами и катушками индуктивности, собранные в единый interface для комфортного использования без браузера.",
+    "dictionary": [
+      {
+        "word": "components",
+        "transcription": "kəmˈpəʊnənts",
+        "translation": "компоненты"
+      },
+      {
+        "word": "interface",
+        "transcription": "ˈɪntəfeɪs",
+        "translation": "интерфейс"
+      },
+      {
+        "word": "parameters",
+        "transcription": "pəˈræmɪtəz",
+        "translation": "параметры"
+      }
+    ],
+    "source_url": "https://habr.com/ru/articles/1107680/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107680",
+    "channel_message_id": 114,
+    "discussion_message_id": 162,
+    "comment_message_id": 165,
+    "article_url": "https://habr.com/ru/articles/1107680/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107680",
+    "image_urls": [
+      "https://habr.com/share/publication/1107680/328718b0db23ca04329c4c17bc7c244b/",
+      "https://habrastorage.org/extt/03/32/1d/03321d92d4c35e4ecad6864a75b6576f.jpg",
+      "https://habrastorage.org/extt/3e/9b/3b/3e9b3b009ee67816a73ce2f8bccacc04.jpg"
+    ],
+    "image_hashes": [
+      "ec6bb76bcd9595fe56cbdd045a52cee68ab7370135c9fd3ea8e8f42020482ae5",
+      "c5fb4e69a25e91d49b2aca909ca79cb584c202a8c6235efe8fdb864747952aef",
+      "93f46d9dea399a6ed821ca4dcd9e9e371f5b31a9c25f44b5a99c8a34ee0e94f2"
+    ],
+    "image_fingerprints": [
+      "000008572b03e0e0",
+      "09018e6cbc300000",
+      "0505265ebe188080",
+      "808009172f066060",
+      "c4c4031f8f0ce060",
+      "7020002562004e4e",
+      "4242034747063030",
+      "c444035f4f0c3030",
+      "c0c003170f06b030",
+      "606002454b015858",
+      "2d2d6d6929000000",
+      "6d6c292500000000",
+      "6929240000000000",
+      "b225252d2d2d2900",
+      "712d2d352b252d24",
+      "b2b234dc2d272925",
+      "b2b23430dcdc2527",
+      "2d252d352b2d2d6d",
+      "2d2d00352b012d2d",
+      "b2b2dc25272d252d",
+      "8cda97c040000000",
+      "b2068c988c8cc200",
+      "dcac8c92c1400000",
+      "9780400000000000",
+      "008898989c8cacc8",
+      "b2b2303001068c84",
+      "8898989888dcacac",
+      "98989898805cc42c",
+      "b2b210030684a010",
+      "b230038684089898"
+    ],
+    "channel_message_ids": [
+      114,
+      115,
+      116
+    ]
   }
 ]
