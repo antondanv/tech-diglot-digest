@@ -3058,5 +3058,53 @@
       115,
       116
     ]
+  },
+  {
+    "topic": "Атака через Git-репозиторий",
+    "headline": "Осторожно: злоумышленники маскируют запуск вредоносного кода под вакансию в Git ⚠️",
+    "text": "Исследователь безопасности обнаружил изощренный способ взлома через repository, присланные в виде ZIP-архива. Атака использует легитимные механизмы Git Hooks и Git Filters для скрытого execution вредоносного скрипта при простом просмотре файлов или переключении веток.\n\nДля срабатывания vulnerability достаточно выполнить обычную команду, например git status, которую среда разработки может запустить автоматически. Скрипт пытается определить операционную систему жертвы, чтобы скачать и запустить сторонний код, оставаясь при этом незаметным для пользователя.",
+    "dictionary": [
+      {
+        "word": "repository",
+        "transcription": "rɪˈpɒzətri",
+        "translation": "репозиторий"
+      },
+      {
+        "word": "vulnerability",
+        "transcription": "ˌvʌlnərəˈbɪləti",
+        "translation": "уязвимость"
+      },
+      {
+        "word": "execution",
+        "transcription": "ˌeksɪˈkjuːʃn",
+        "translation": "выполнение"
+      }
+    ],
+    "source_url": "https://habr.com/ru/articles/1107692/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107692",
+    "channel_message_id": 117,
+    "discussion_message_id": 167,
+    "comment_message_id": 168,
+    "article_url": "https://habr.com/ru/articles/1107692/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107692",
+    "image_urls": [
+      "https://habrastorage.org/extt/5a/d8/9d/5ad89d9a9573768b961eb966991746c9.png"
+    ],
+    "image_hashes": [
+      "6d321588a90d782b519d1a35112483f1a6ac5902d944db4b365dd733713ecd33"
+    ],
+    "image_fingerprints": [
+      "0dd064ecc151d962",
+      "8e71296d63727963",
+      "5563929b96c6a5c5",
+      "8e71296d63727b63",
+      "9e71296d63727963",
+      "9e71296d63727b63",
+      "6d8262664e0c494b",
+      "adb8c6cec4d5d1e9",
+      "821b9c3c1c1a3b2a",
+      "8a2cb23332387478"
+    ],
+    "channel_message_ids": [
+      117
+    ]
   }
 ]
